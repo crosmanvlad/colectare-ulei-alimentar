@@ -1,0 +1,288 @@
+@use '../../styles/variables.scss' as *;
+
+.main {
+  padding-top: 5rem;
+}
+
+.banner {
+  padding: 5rem 0 3rem 0;
+  background: linear-gradient(180deg, rgba(9, 51, 34, 0.6) 0%, rgba(4, 13, 10, 0.9) 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  text-align: center;
+
+  .badge {
+    display: inline-block;
+    color: $color-accent-gold;
+    font-family: $font-heading;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-family: $font-heading;
+    font-size: 3rem;
+    font-weight: 900;
+    color: $text-main;
+    margin-bottom: 0.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: $text-muted;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+
+  @media (max-width: 980px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.textContent {
+  .sectionTitle {
+    font-family: $font-heading;
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: $text-main;
+    margin-bottom: 1.25rem;
+
+    .goldText {
+      color: $color-accent-gold;
+    }
+  }
+
+  .leadParagraph {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: $color-primary-light;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .paragraph {
+    font-size: 1.025rem;
+    color: $text-muted;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.exchangeBox {
+  background: rgba(9, 51, 34, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: $radius-lg;
+  padding: 1.75rem;
+  margin-bottom: 2.5rem;
+
+  h3 {
+    font-family: $font-heading;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: $color-accent-gold;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $text-muted;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: $radius-md;
+
+  svg {
+    color: $color-accent-gold;
+    flex-shrink: 0;
+  }
+
+  strong {
+    display: block;
+    font-family: $font-heading;
+    font-size: 1.05rem;
+    color: $text-main;
+    margin-bottom: 0.15rem;
+  }
+
+  span {
+    font-size: 0.85rem;
+    color: $text-muted;
+  }
+}
+
+.flowChain {
+  margin-bottom: 2.5rem;
+
+  h3 {
+    font-family: $font-heading;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: $text-main;
+    margin-bottom: 1rem;
+  }
+}
+
+.chainSteps {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+
+  .chainStep {
+    padding: 0.6rem 1rem;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: $radius-sm;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $color-accent-gold;
+  }
+
+  .chainArrow {
+    color: $text-muted;
+    font-weight: 700;
+  }
+}
+
+.ctaWrapper {
+  display: flex;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #093826;
+  color: #ffffff;
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.9rem 2rem;
+  border-radius: $radius-sm;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 25px rgba(14, 133, 87, 0.4);
+  @include transition-smooth;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: #0e4e35;
+    color: $color-accent-gold;
+  }
+}
+
+.visualContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.imageCard {
+  @include glass-panel;
+  padding: 0.75rem;
+  border-radius: $radius-lg;
+  border-color: rgba(212, 175, 55, 0.3);
+
+  img {
+    display: block;
+  }
+}
+
+.clientTypesBox {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: $radius-lg;
+  padding: 1.5rem;
+
+  h4 {
+    font-family: $font-heading;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: $text-main;
+    margin-bottom: 1rem;
+  }
+}
+
+.clientsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.clientItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  background: rgba(9, 51, 34, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: $radius-md;
+
+  svg {
+    color: $color-accent-gold;
+    flex-shrink: 0;
+  }
+
+  span {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: $text-main;
+  }
+}
+
+.networkBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: rgba(9, 51, 34, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: $radius-lg;
+
+  svg {
+    color: $color-accent-gold;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  strong {
+    display: block;
+    font-family: $font-heading;
+    font-size: 1.15rem;
+    color: $color-accent-gold;
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: $text-muted;
+    line-height: 1.6;
+  }
+}

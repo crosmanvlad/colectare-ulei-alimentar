@@ -1,0 +1,155 @@
+@use '../../styles/variables.scss' as *;
+
+.section {
+  padding: 6rem 0;
+  background: rgba(16, 185, 129, 0.02);
+}
+
+.header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 3.5rem auto;
+
+  .sectionBadge {
+    display: inline-block;
+    color: $color-primary-light;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-family: $font-heading;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: $text-main;
+  }
+
+  .subtitle {
+    color: $text-muted;
+    font-size: 1.05rem;
+  }
+}
+
+.calculatorCard {
+  @include glass-panel;
+  border-radius: $radius-lg;
+  padding: 3rem;
+  max-width: 960px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+.toggleGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+
+  button {
+    padding: 0.75rem 1.75rem;
+    border-radius: $radius-full;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: 1px solid $border-glass;
+    background: $bg-glass;
+    color: $text-muted;
+    @include transition-smooth;
+
+    &.active {
+      background: $color-primary;
+      color: #ffffff;
+      border-color: $color-primary;
+      box-shadow: $shadow-glow;
+    }
+  }
+}
+
+.sliderContainer {
+  margin-bottom: 3rem;
+
+  .sliderHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    label {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: $text-main;
+    }
+
+    .volumeDisplay {
+      font-family: $font-heading;
+      font-size: 2rem;
+      font-weight: 800;
+      color: $color-accent-gold;
+    }
+  }
+
+  .rangeInput {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #122c22;
+    outline: none;
+    accent-color: $color-primary;
+    cursor: pointer;
+  }
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.resultBox {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: $radius-md;
+  padding: 1.5rem;
+  text-align: center;
+  @include transition-smooth;
+
+  &:hover {
+    border-color: $border-glass-hover;
+    background: rgba(16, 185, 129, 0.05);
+  }
+
+  .boxIcon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.12);
+    color: $color-primary-light;
+    @include flex-center;
+    margin: 0 auto 1rem auto;
+  }
+
+  .boxValue {
+    font-family: $font-heading;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: $text-main;
+    margin-bottom: 0.35rem;
+  }
+
+  .boxLabel {
+    font-size: 0.875rem;
+    color: $text-muted;
+  }
+}

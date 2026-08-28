@@ -1,0 +1,101 @@
+@use '../../styles/variables.scss' as *;
+
+.section {
+  padding: 6rem 0;
+  background: rgba(255, 255, 255, 0.015);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 4rem auto;
+
+  .sectionBadge {
+    display: inline-block;
+    color: $color-accent-gold;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-family: $font-heading;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: $text-main;
+  }
+
+  .subtitle {
+    color: $text-muted;
+    font-size: 1.05rem;
+  }
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stepCard {
+  @include glass-panel;
+  border-radius: $radius-lg;
+  padding: 2.5rem 1.5rem;
+  position: relative;
+  @include transition-smooth;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: $shadow-gold-glow;
+  }
+
+  .stepNumber {
+    font-family: $font-heading;
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    line-height: 1;
+  }
+
+  .iconBox {
+    width: 48px;
+    height: 48px;
+    border-radius: $radius-md;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    color: $color-accent-gold;
+    @include flex-center;
+    margin-bottom: 1.25rem;
+  }
+
+  .stepTitle {
+    font-family: $font-heading;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: $text-main;
+  }
+
+  .stepDesc {
+    color: $text-muted;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+}

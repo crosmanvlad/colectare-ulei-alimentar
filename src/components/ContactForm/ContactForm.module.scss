@@ -1,0 +1,283 @@
+@use '../../styles/variables.scss' as *;
+
+.section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.glowBg {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.5rem;
+  align-items: start;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.contactInfo {
+  .sectionBadge {
+    display: inline-block;
+    color: $color-primary-light;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-family: $font-heading;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    color: $text-main;
+    line-height: 1.2;
+
+    .highlight {
+      color: $color-primary-light;
+    }
+  }
+
+  .desc {
+    color: $text-muted;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.infoCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.infoCard {
+  @include glass-panel;
+  border-radius: $radius-md;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  @include transition-smooth;
+
+  &:hover {
+    border-color: $border-glass-hover;
+    transform: translateX(4px);
+  }
+
+  .cardIcon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.12);
+    color: $color-primary-light;
+    @include flex-center;
+    flex-shrink: 0;
+  }
+
+  .cardText {
+    label {
+      display: block;
+      font-size: 0.85rem;
+      color: $text-muted;
+      margin-bottom: 0.15rem;
+    }
+    strong {
+      font-family: $font-heading;
+      font-size: 1.1rem;
+      color: $text-main;
+    }
+  }
+}
+
+.formCard {
+  @include glass-panel;
+  border-radius: $radius-lg;
+  padding: 2.75rem 2.5rem;
+  border-color: rgba(52, 211, 153, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+
+  @media (max-width: 600px) {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+.formHeader {
+  margin-bottom: 2rem;
+
+  h3 {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $text-main;
+    margin-bottom: 0.35rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-muted;
+  }
+}
+
+.typeSelector {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+
+  button {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    border-radius: $radius-sm;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid $border-glass;
+    background: rgba(255, 255, 255, 0.03);
+    color: $text-muted;
+    @include transition-smooth;
+
+    &.active {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: $color-primary;
+      color: $color-primary-light;
+    }
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $text-main;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: $radius-sm;
+    background: rgba(5, 15, 12, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: $text-main;
+    font-size: 0.95rem;
+    outline: none;
+    @include transition-smooth;
+
+    &:focus {
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+}
+
+.rowTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.honeypot {
+  display: none !important;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 0.95rem 1.5rem;
+  border-radius: $radius-md;
+  background: linear-gradient(135deg, $color-primary-dark, $color-primary);
+  color: #ffffff;
+  font-family: $font-heading;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: $shadow-glow;
+  @include transition-smooth;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 0 35px rgba(16, 185, 129, 0.4);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.successBox {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+
+  .icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.15);
+    color: $color-primary-light;
+    @include flex-center;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  h4 {
+    font-family: $font-heading;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $text-main;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $text-muted;
+    font-size: 0.975rem;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    padding: 0.7rem 1.5rem;
+    border-radius: $radius-full;
+    background: $bg-glass;
+    border: 1px solid $border-glass;
+    color: $text-main;
+    font-weight: 600;
+    cursor: pointer;
+    @include transition-smooth;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}

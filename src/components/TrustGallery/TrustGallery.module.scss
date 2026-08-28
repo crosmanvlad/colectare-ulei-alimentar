@@ -1,0 +1,132 @@
+@use '../../styles/variables.scss' as *;
+
+.section {
+  padding: 6rem 0;
+  background: rgba(4, 13, 10, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem auto;
+
+  .sectionBadge {
+    display: inline-block;
+    color: $color-accent-gold;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-family: $font-heading;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: $text-main;
+  }
+
+  .subtitle {
+    color: $text-muted;
+    font-size: 1.05rem;
+  }
+}
+
+.valuesRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.valueCard {
+  @include glass-panel;
+  border-radius: $radius-md;
+  padding: 1.5rem;
+  text-align: center;
+  border-color: rgba(212, 175, 55, 0.25);
+  @include transition-smooth;
+
+  &:hover {
+    border-color: $color-accent-gold;
+    background: rgba(212, 175, 55, 0.06);
+    transform: translateY(-4px);
+  }
+
+  .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.15);
+    color: $color-accent-gold;
+    @include flex-center;
+    margin: 0 auto 1rem auto;
+  }
+
+  h4 {
+    font-family: $font-heading;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $text-main;
+    margin-bottom: 0.35rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+    color: $text-muted;
+  }
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.galleryCard {
+  @include glass-panel;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  padding: 0.75rem;
+  border-color: rgba(212, 175, 55, 0.3);
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: $radius-md;
+    display: block;
+  }
+
+  .cardMeta {
+    padding: 1.25rem 0.5rem 0.5rem 0.5rem;
+
+    h4 {
+      font-family: $font-heading;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: $text-main;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $text-muted;
+    }
+  }
+}

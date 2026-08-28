@@ -1,0 +1,70 @@
+@use '../../styles/variables.scss' as *;
+
+.card {
+  background: rgba(4, 24, 17, 0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: $radius-lg;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), $shadow-gold-glow;
+}
+
+.title {
+  font-family: $font-heading;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: $text-main;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.rewardItem {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: $radius-md;
+  @include transition-smooth;
+
+  &:hover {
+    border-color: $color-accent-gold;
+    background: rgba(212, 175, 55, 0.08);
+  }
+
+  .iconBox {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: $color-accent-gold;
+    @include flex-center;
+    flex-shrink: 0;
+  }
+
+  .textInfo {
+    strong {
+      display: block;
+      font-family: $font-heading;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: $text-main;
+      margin-bottom: 0.15rem;
+    }
+    span {
+      font-size: 0.875rem;
+      color: $text-muted;
+    }
+  }
+}

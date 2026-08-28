@@ -1,0 +1,49 @@
+// SCSS Variables & Design Tokens - TKM OIL GROUP SRL
+$bg-dark: #040d0a;
+$bg-card: rgba(8, 26, 19, 0.75);
+$bg-card-hover: rgba(14, 42, 31, 0.9);
+$bg-glass: rgba(255, 255, 255, 0.035);
+$border-glass: rgba(52, 211, 153, 0.16);
+$border-glass-gold: rgba(212, 175, 55, 0.3);
+$border-glass-hover: rgba(52, 211, 153, 0.4);
+
+$color-primary: #0e8557; // TKM Emerald Green
+$color-primary-light: #22c55e;
+$color-primary-dark: #064e3b;
+
+$color-accent-amber: #f59e0b; 
+$color-accent-gold: #d4af37; // Metallic TKM Gold
+
+$text-main: #f9fafb;
+$text-muted: #9ca3af;
+$text-subtle: #6b7280;
+
+$font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 24px;
+$radius-full: 9999px;
+
+$shadow-glow: 0 0 30px rgba(14, 133, 87, 0.25);
+$shadow-gold-glow: 0 0 25px rgba(212, 175, 55, 0.25);
+$shadow-card: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
+
+@mixin glass-panel {
+  background: $bg-card;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid $border-glass;
+  box-shadow: $shadow-card;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,42 @@
+@use '../../styles/variables.scss' as *;
+
+.main {
+  padding-top: 5rem;
+}
+
+.banner {
+  padding: 5rem 0 3rem 0;
+  background: linear-gradient(180deg, rgba(9, 51, 34, 0.6) 0%, rgba(4, 13, 10, 0.9) 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  text-align: center;
+
+  .badge {
+    display: inline-block;
+    color: $color-accent-gold;
+    font-family: $font-heading;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-family: $font-heading;
+    font-size: 3rem;
+    font-weight: 900;
+    color: $text-main;
+    margin-bottom: 0.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: $text-muted;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+
+.section {
+  padding: 2rem 0 5rem 0;
+}

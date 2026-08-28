@@ -1,0 +1,224 @@
+@use '../../styles/variables.scss' as *;
+
+.main {
+  padding-top: 5rem;
+}
+
+.banner {
+  padding: 5rem 0 3rem 0;
+  background: linear-gradient(180deg, rgba(9, 51, 34, 0.6) 0%, rgba(4, 13, 10, 0.9) 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  text-align: center;
+
+  .badge {
+    display: inline-block;
+    color: $color-accent-gold;
+    font-family: $font-heading;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-family: $font-heading;
+    font-size: 3rem;
+    font-weight: 900;
+    color: $text-main;
+    margin-bottom: 0.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: $text-muted;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.introCard {
+  background: rgba(9, 51, 34, 0.4);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: $radius-lg;
+  padding: 2.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+
+  h2 {
+    font-family: $font-heading;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: $color-accent-gold;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: $text-muted;
+    line-height: 1.65;
+  }
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.serviceCard {
+  @include glass-panel;
+  border-radius: $radius-lg;
+  padding: 2.5rem;
+  border-color: rgba(212, 175, 55, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include transition-smooth;
+
+  &:hover {
+    border-color: $color-accent-gold;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), $shadow-gold-glow;
+  }
+
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+
+    .iconBox {
+      width: 56px;
+      height: 56px;
+      border-radius: $radius-md;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: $color-accent-gold;
+      @include flex-center;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-family: $font-heading;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: $text-main;
+    }
+  }
+
+  .cardDesc {
+    font-size: 1rem;
+    color: $text-muted;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .featureList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.925rem;
+      color: $text-main;
+
+      svg {
+        color: $color-primary-light;
+        flex-shrink: 0;
+        margin-top: 0.15rem;
+      }
+    }
+  }
+
+  .cardActions {
+    margin-top: auto;
+  }
+}
+
+.detailBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #093826;
+  color: #ffffff;
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: $radius-sm;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  @include transition-smooth;
+
+  &:hover {
+    background: #0e4e35;
+    color: $color-accent-gold;
+  }
+}
+
+.ctaBox {
+  background: linear-gradient(135deg, #093322 0%, #154c33 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: $radius-lg;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ctaText {
+    h3 {
+      font-family: $font-heading;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: $color-accent-gold;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.05rem;
+      color: $text-main;
+    }
+  }
+
+  .ctaBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #04140e;
+    color: #ffffff;
+    font-family: $font-heading;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: $radius-sm;
+    border: 1px solid $color-accent-gold;
+    white-space: nowrap;
+    box-shadow: $shadow-gold-glow;
+    @include transition-smooth;
+
+    &:hover {
+      background: rgba(212, 175, 55, 0.2);
+      color: $color-accent-gold;
+    }
+  }
+}
