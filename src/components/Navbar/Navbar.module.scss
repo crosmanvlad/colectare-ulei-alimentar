@@ -5,17 +5,17 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   padding: 0.85rem 0;
   @include transition-smooth;
 
   &.scrolled {
-    padding: 0.6rem 0;
-    background: rgba(4, 13, 10, 0.95);
+    padding: 0.55rem 0;
+    background: rgba(4, 13, 10, 0.96);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -29,6 +29,33 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  z-index: 1002;
+
+  .logoImg {
+    width: auto;
+    height: 48px;
+    object-fit: contain;
+
+    @media (max-width: 480px) {
+      height: 40px;
+    }
+  }
+}
+
+.mobileBackdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+
+  &.showBackdrop {
+    display: block;
+  }
 }
 
 .navLinks {
@@ -37,23 +64,31 @@
   gap: 1.75rem;
   list-style: none;
 
-  @media (max-width: 980px) {
+  @media (max-width: 1024px) {
     display: none;
 
     &.mobileOpen {
       display: flex;
       flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: rgba(6, 19, 14, 0.98);
-      backdrop-filter: blur(20px);
-      padding: 1.5rem 2rem;
-      border-bottom: 1px solid $border-glass-gold;
-      gap: 1.25rem;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-      align-items: flex-start;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 320px;
+      max-width: 85vw;
+      height: 100vh;
+      background: rgba(5, 18, 14, 0.98);
+      backdrop-filter: blur(24px);
+      padding: 5.5rem 1.75rem 2rem 1.75rem;
+      border-left: 1px solid rgba(212, 175, 55, 0.3);
+      gap: 1.15rem;
+      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.9);
+      overflow-y: auto;
+      z-index: 1001;
+      align-items: stretch;
+
+      li {
+        width: 100%;
+      }
     }
   }
 }
@@ -62,13 +97,13 @@
   color: $text-main;
   font-family: $font-heading;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   letter-spacing: 0.04em;
   @include transition-smooth;
   position: relative;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  justify-content: space-between;
 
   &:hover, &.active {
     color: $color-accent-gold;
@@ -84,46 +119,172 @@
     background: $color-accent-gold;
     border-radius: 2px;
     @include transition-smooth;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
   }
 
   &:hover::after, &.active::after {
     width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 1.05rem;
+    padding: 0.4rem 0;
   }
 }
 
 .hasDropdown {
   position: relative;
 
+  .desktopServicesWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .desktopChevron {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .mobileSubToggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: $color-accent-gold;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+
+    @media (max-width: 1024px) {
+      display: flex;
+      align-items: center;
+    }
+
+    .mobileChevron {
+      @include transition-smooth;
+
+      &.rotated {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
   .dropdownMenu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 260px;
-    background: rgba(6, 19, 14, 0.96);
+    min-width: 270px;
+    background: rgba(6, 19, 14, 0.98);
     backdrop-filter: blur(20px);
     border: 1px solid $border-glass-gold;
     border-radius: $radius-md;
     padding: 0.75rem 0;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
 
     a {
       display: block;
-      padding: 0.6rem 1.25rem;
+      padding: 0.65rem 1.25rem;
       color: $text-main;
-      font-size: 0.85rem;
+      font-size: 0.875rem;
       font-weight: 600;
       @include transition-smooth;
 
       &:hover {
-        background: rgba(212, 175, 55, 0.12);
+        background: rgba(212, 175, 55, 0.15);
         color: $color-accent-gold;
       }
     }
 
-    &.showDropdown {
-      display: block;
+    .subLinkOverview {
+      color: $color-accent-gold;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 0.25rem;
     }
+
+    &.showDropdown {
+      @media (min-width: 1025px) {
+        display: block;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      position: static;
+      border: none;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: $radius-sm;
+      margin-top: 0.5rem;
+      box-shadow: none;
+
+      &.showMobileSubmenu {
+        display: block;
+      }
+
+      a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.mobileDrawerFooter {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobileCallBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: $color-accent-gold;
+    font-family: $font-heading;
+    font-weight: 800;
+    font-size: 0.95rem;
+    padding: 0.8rem;
+    border-radius: $radius-sm;
+    text-decoration: none;
+  }
+
+  .mobileEmailBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: $text-muted;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .mobileCtaBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #093826;
+    border: 1px solid $color-accent-gold;
+    color: #ffffff;
+    font-family: $font-heading;
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 0.85rem;
+    border-radius: $radius-sm;
+    text-decoration: none;
   }
 }
 
@@ -131,6 +292,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  z-index: 1002;
 }
 
 .contactTop {
@@ -167,7 +329,7 @@
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 }
@@ -176,11 +338,11 @@
   display: none;
   background: transparent;
   border: none;
-  color: $text-main;
+  color: $color-accent-gold;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.4rem;
 
-  @media (max-width: 980px) {
+  @media (max-width: 1024px) {
     display: block;
   }
 }

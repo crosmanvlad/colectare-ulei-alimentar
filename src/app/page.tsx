@@ -10,6 +10,7 @@ import Calculator from '@/components/Calculator/Calculator';
 import Faq from '@/components/Faq/Faq';
 import ContactForm from '@/components/ContactForm/ContactForm';
 import Footer from '@/components/Footer/Footer';
+import prStyles from '@/components/Process/ProcessRewards.module.scss';
 
 export default function Home() {
   return (
@@ -18,10 +19,10 @@ export default function Home() {
       <main>
         <Hero />
 
-        {/* Cum Functioneaza & Rewards Grid matching wesite-design.jpeg */}
-        <section style={{ padding: '4rem 0', background: 'rgba(4, 13, 10, 0.4)' }}>
+        {/* Process & Rewards Grid Section */}
+        <section className={prStyles.section}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '3rem', alignItems: 'center' }}>
+            <div className={prStyles.grid}>
               <Process />
               <RewardsBanner />
             </div>

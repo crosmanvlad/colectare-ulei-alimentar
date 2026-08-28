@@ -1,51 +1,48 @@
 @use '../../styles/variables.scss' as *;
 
 .section {
-  padding: 6rem 0;
-  background: rgba(255, 255, 255, 0.015);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem 0;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0;
+  }
 }
 
 .header {
   text-align: center;
   max-width: 650px;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 2.5rem auto;
 
   .sectionBadge {
     display: inline-block;
     color: $color-accent-gold;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
 
   .title {
     font-family: $font-heading;
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 4vw, 2.35rem);
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: $text-main;
   }
 
   .subtitle {
     color: $text-muted;
-    font-size: 1.05rem;
+    font-size: clamp(0.9rem, 2vw, 1.05rem);
   }
 }
 
 .stepsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.75rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
 
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     grid-template-columns: 1fr;
   }
 }
@@ -53,7 +50,7 @@
 .stepCard {
   @include glass-panel;
   border-radius: $radius-lg;
-  padding: 2.5rem 1.5rem;
+  padding: 1.75rem 1.25rem;
   position: relative;
   @include transition-smooth;
 
@@ -65,37 +62,37 @@
 
   .stepNumber {
     font-family: $font-heading;
-    font-size: 2.75rem;
+    font-size: 2.25rem;
     font-weight: 800;
     color: rgba(255, 255, 255, 0.1);
     position: absolute;
-    top: 1.25rem;
-    right: 1.5rem;
+    top: 1rem;
+    right: 1.25rem;
     line-height: 1;
   }
 
   .iconBox {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: $radius-md;
     background: rgba(212, 175, 55, 0.12);
     border: 1px solid rgba(212, 175, 55, 0.25);
     color: $color-accent-gold;
     @include flex-center;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
   }
 
   .stepTitle {
     font-family: $font-heading;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     color: $text-main;
   }
 
   .stepDesc {
     color: $text-muted;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     line-height: 1.55;
   }
 }

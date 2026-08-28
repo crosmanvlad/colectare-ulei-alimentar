@@ -5,18 +5,22 @@
   backdrop-filter: blur(16px);
   border: 1px solid rgba(212, 175, 55, 0.4);
   border-radius: $radius-lg;
-  padding: 2.25rem 2rem;
+  padding: 2rem 1.75rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), $shadow-gold-glow;
+
+  @media (max-width: 500px) {
+    padding: 1.5rem 1.15rem;
+  }
 }
 
 .title {
   font-family: $font-heading;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
   font-weight: 800;
   color: $text-main;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid rgba(212, 175, 55, 0.25);
 }
@@ -24,14 +28,14 @@
 .itemsList {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .rewardItem {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  padding: 1rem 1.25rem;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: $radius-md;
@@ -43,8 +47,8 @@
   }
 
   .iconBox {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background: rgba(212, 175, 55, 0.15);
     border: 1px solid rgba(212, 175, 55, 0.3);
@@ -57,13 +61,13 @@
     strong {
       display: block;
       font-family: $font-heading;
-      font-size: 1.1rem;
+      font-size: clamp(0.95rem, 2.5vw, 1.05rem);
       font-weight: 800;
       color: $text-main;
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.1rem;
     }
     span {
-      font-size: 0.875rem;
+      font-size: clamp(0.78rem, 2vw, 0.85rem);
       color: $text-muted;
     }
   }
