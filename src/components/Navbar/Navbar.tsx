@@ -57,7 +57,7 @@ export default function Navbar() {
 
           {/* Desktop & Mobile Navigation Links */}
           <nav>
-            <div 
+            <div
               className={`${styles.mobileBackdrop} ${mobileOpen ? styles.showBackdrop : ''}`}
               onClick={closeMobileMenu}
             />
@@ -83,7 +83,7 @@ export default function Navbar() {
               </li>
 
               {/* Desktop Dropdown & Mobile Accordion */}
-              <li 
+              <li
                 className={styles.hasDropdown}
                 onMouseEnter={() => setDropdownOpen(true)}
                 onMouseLeave={() => setDropdownOpen(false)}
@@ -99,7 +99,7 @@ export default function Navbar() {
                   </Link>
 
                   {/* Mobile toggle button for sub-menu */}
-                  <button 
+                  <button
                     className={styles.mobileSubToggle}
                     onClick={(e) => {
                       e.preventDefault();
@@ -113,24 +113,30 @@ export default function Navbar() {
 
                 {/* Dropdown Menu Desktop / Accordion Mobile */}
                 <div className={`${styles.dropdownMenu} ${dropdownOpen ? styles.showDropdown : ''} ${mobileSubmenuOpen ? styles.showMobileSubmenu : ''}`}>
-                  <Link 
+                  <Link
                     href="/servicii"
                     className={styles.subLinkOverview}
                     onClick={closeMobileMenu}
                   >
                     Toate Serviciile (Overview)
                   </Link>
-                  <Link 
+                  <Link
                     href="/servicii/colectare-ulei-uzat"
                     onClick={closeMobileMenu}
                   >
                     Colectare Ulei Alimentar Uzat
                   </Link>
-                  <Link 
+                  <Link
                     href="/servicii/separatoare-grasimi"
                     onClick={closeMobileMenu}
                   >
                     Colectare Separatoare de Grăsimi
+                  </Link>
+                  <Link
+                    href="/servicii/vanzare-ulei"
+                    onClick={closeMobileMenu}
+                  >
+                    Vânzare și Distribuție Ulei
                   </Link>
                 </div>
               </li>
@@ -169,7 +175,7 @@ export default function Navbar() {
               <li className={styles.mobileDrawerFooter}>
                 <a href="tel:0746405269" className={styles.mobileCallBtn}>
                   <Phone size={18} />
-                  <span>Suni Direct: 0746 405 259</span>
+                  <span>Suni Direct: 0746 405 269</span>
                 </a>
                 <a href="mailto:office@tkm-oil.ro" className={styles.mobileEmailBtn}>
                   <Mail size={16} />
@@ -188,15 +194,15 @@ export default function Navbar() {
             <div className={styles.contactTop}>
               <a href="tel:0746405269" className={styles.phoneBtn} id="nav-phone-call">
                 <Phone size={15} />
-                <span>0746 405 259</span>
+                <span>0746 405 269</span>
               </a>
               <a href="mailto:office@tkm-oil.ro" className={styles.emailSub}>
                 office@tkm-oil.ro
               </a>
             </div>
 
-            <button 
-              className={styles.mobileToggle} 
+            <button
+              className={styles.mobileToggle}
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle navigation menu"
               id="nav-mobile-toggle"

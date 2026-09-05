@@ -3,7 +3,21 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, phone, email, city, company, estimatedVolume, message, clientType, honeypot } = body;
+    const { 
+      name, 
+      phone, 
+      email, 
+      city, 
+      company, 
+      estimatedVolume, 
+      message, 
+      clientType, 
+      honeypot,
+      formType,
+      address,
+      oilType,
+      quantityLiters
+    } = body;
 
     // Honeypot spam check
     if (honeypot) {
@@ -11,21 +25,33 @@ export async function POST(request: Request) {
     }
 
     // Server-side validation
-    if (!name || !phone || !email || !city) {
-      return NextResponse.json(
-        { success: false, message: 'Vă rugăm să completați toate câmpurile obligatorii (Nume, Telefon, Email, Oraș).' },
-        { status: 400 }
-      );
+    if (formType === 'vanzare_ulei') {
+      if (!name || !phone || !email || !company || !address || !oilType) {
+        return NextResponse.json(
+          { success: false, message: 'Vă rugăm să completați toate câmpurile obligatorii (Nume, Telefon, Email, Nume Firmă, Adresă, Tip Ulei).' },
+          { status: 400 }
+        );
+      }
+    } else {
+      if (!name || !phone || !email || !city) {
+        return NextResponse.json(
+          { success: false, message: 'Vă rugăm să completați toate câmpurile obligatorii (Nume, Telefon, Email, Oraș).' },
+          { status: 400 }
+        );
+      }
     }
 
     // Log contact form submission in server log
-    console.log('--- NOUĂ SOLICITARE PRELUARE ULEI UZAT ---');
-    console.log(`Tip Client: ${clientType}`);
+    console.log(`--- NOUĂ SOLICITARE (${formType === 'vanzare_ulei' ? 'VÂNZARE ȘI DISTRIBUȚIE ULEI' : 'PRELUARE ULEI UZAT'}) ---`);
+    if (clientType) console.log(`Tip Client: ${clientType}`);
     console.log(`Nume: ${name}`);
     console.log(`Telefon: ${phone}`);
     console.log(`Email: ${email}`);
-    console.log(`Oraș/Județ: ${city}`);
-    if (company) console.log(`Companie: ${company}`);
+    if (city) console.log(`Oraș/Județ: ${city}`);
+    if (company) console.log(`Companie/Firmă: ${company}`);
+    if (address) console.log(`Adresă: ${address}`);
+    if (oilType) console.log(`Tip Ulei Solicitat: ${oilType}`);
+    if (quantityLiters) console.log(`Cantitate (Litri): ${quantityLiters}`);
     if (estimatedVolume) console.log(`Volum Estimat: ${estimatedVolume}`);
     if (message) console.log(`Mesaj: ${message}`);
     console.log('-----------------------------------------');

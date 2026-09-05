@@ -14,15 +14,11 @@ export default function Faq() {
     },
     {
       q: 'Cât costă recipienții de stocare și ridicarea?',
-      a: 'Colectarea este 100% GRATUITĂ pentru companii și persoane fizice. De asemenea, furnizăm gratuit butoaie speciale food-grade (60L, 120L sau 200L) cu sigiliu și capac ermetic.'
+      a: 'Colectarea este 100% GRATUITĂ pentru companii și persoane fizice. De asemenea, furnizăm gratuit recipiente speciale cu capac ermetic.'
     },
     {
       q: 'Ce documente eliberați pentru controalele Mediu & DSV?',
-      a: 'La fiecare ridicare eliberăm pe loc Formularul de Încărcare-Descărcare Deșeuri Nepericuloase (conform Anexei 3 OUG 92/2021) și adeverință oficială pentru trasabilitate, valabilă la verificările Gărzii de Mediu și DSVSA.'
-    },
-    {
-      q: 'Care este cantitatea minimă pentru o ridicare gratuită?',
-      a: 'Pentru restaurante și persoane juridice, ridicăm de la minim 30 litri. Pentru gospodării și persoane fizice, organizăm puncte periodice sau ridicări directe de la 15 litri.'
+      a: 'La fiecare ridicare eliberăm pe loc Anexa 3 - Formularul de Încărcare-Descărcare Deșeuri Nepericuloase.'
     },
     {
       q: 'Ce se întâmplă cu uleiul alimentar după colectare?',

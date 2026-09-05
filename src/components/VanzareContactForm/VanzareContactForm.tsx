@@ -2,25 +2,25 @@
 
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, CheckCircle, Loader2 } from 'lucide-react';
-import styles from './ContactForm.module.scss';
+import styles from '@/components/ContactForm/ContactForm.module.scss';
 
-export default function ContactForm() {
-  const [clientType, setClientType] = useState<'horeca' | 'persoana'>('horeca');
+export default function VanzareContactForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
   const [formData, setFormData] = useState({
     name: '',
-    company: '',
     phone: '',
     email: '',
-    city: '',
-    estimatedVolume: '50-100L',
+    company: '',
+    address: '',
+    oilType: '',
+    quantityLiters: '',
     message: '',
     honeypot: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -38,7 +38,7 @@ export default function ContactForm() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, clientType })
+        body: JSON.stringify({ ...formData, formType: 'vanzare_ulei' })
       });
 
       if (!res.ok) {
@@ -49,11 +49,12 @@ export default function ContactForm() {
       setStatus('success');
       setFormData({
         name: '',
-        company: '',
         phone: '',
         email: '',
-        city: '',
-        estimatedVolume: '50-100L',
+        company: '',
+        address: '',
+        oilType: '',
+        quantityLiters: '',
         message: '',
         honeypot: ''
       });
@@ -65,17 +66,17 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className={styles.section}>
+    <section id="contact-vanzare" className={styles.section} style={{ paddingTop: '2rem' }}>
       <div className={styles.glowBg} />
-      <div className="container">
+      <div>
         <div className={styles.grid}>
           <div className={styles.contactInfo}>
-            <span className={styles.sectionBadge}>Contact TKM OIL GROUP</span>
+            <span className={styles.sectionBadge}>Comenzi & Distribuție</span>
             <h2 className={styles.title}>
-              Solicită o Preluare sau un <span className={styles.highlight}>Contract HORECA</span>
+              Solicită o Ofertă pentru <span className={styles.highlight}>Vânzare și Distribuție Ulei</span>
             </h2>
             <p className={styles.desc}>
-              Echipa operativă TKM OIL GROUP SRL acoperă toate județele din România. Completează formularul și te contactăm în maximum 2 ore pentru livrarea containerelor gratuite.
+              Livrăm rapid ulei proaspăt direct la restaurantul, hotelul sau unitatea ta de producție. Completează formularul și te contactăm în maximum 2 ore cu oferta comercială personalizată.
             </p>
 
             <div className={styles.infoCards}>
@@ -84,7 +85,7 @@ export default function ContactForm() {
                   <Phone size={22} />
                 </div>
                 <div className={styles.cardText}>
-                  <label>Dispecerat Preluări Directe</label>
+                  <label>Dispecerat Comenzi & Distribuție</label>
                   <strong>0746 405 269</strong>
                 </div>
               </div>
@@ -94,7 +95,7 @@ export default function ContactForm() {
                   <Mail size={22} />
                 </div>
                 <div className={styles.cardText}>
-                  <label>Depunere Solicitări & Documente Mediu</label>
+                  <label>Comenzi & Ofertare HoReCa</label>
                   <strong>office@tkm-oil.ro</strong>
                 </div>
               </div>
@@ -104,8 +105,8 @@ export default function ContactForm() {
                   <MapPin size={22} />
                 </div>
                 <div className={styles.cardText}>
-                  <label>Companie Autorizată ANPM</label>
-                  <strong>TKM OIL GROUP SRL • Acoperire Națională</strong>
+                  <label>Acoperire Logistică</label>
+                  <strong>TKM OIL GROUP SRL • Toate Județele României</strong>
                 </div>
               </div>
             </div>
@@ -119,36 +120,17 @@ export default function ContactForm() {
                 </div>
                 <h4>Solicitare Trimisă cu Succes!</h4>
                 <p>
-                  Vă mulțumim. Un reprezentant TKM OIL GROUP vă va contacta la numărul furnizat.
+                  Vă mulțumim. Un reprezentant TKM OIL GROUP vă va contacta în scurt timp cu oferta comercială solicitată.
                 </p>
-                <button onClick={() => setStatus('idle')} id="form-reset-btn">
+                <button onClick={() => setStatus('idle')}>
                   Trimite altă solicitare
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} id="contact-form">
+              <form onSubmit={handleSubmit} id="vanzare-form">
                 <div className={styles.formHeader}>
-                  <h3>Formular Solicitare Colectare</h3>
-                  <p>Comandă gratuită de recipiente & evaluare rapidă</p>
-                </div>
-
-                <div className={styles.typeSelector}>
-                  <button
-                    type="button"
-                    className={clientType === 'horeca' ? styles.active : ''}
-                    onClick={() => setClientType('horeca')}
-                    id="form-tab-horeca"
-                  >
-                    HORECA / Operator Economic
-                  </button>
-                  <button
-                    type="button"
-                    className={clientType === 'persoana' ? styles.active : ''}
-                    onClick={() => setClientType('persoana')}
-                    id="form-tab-persoana"
-                  >
-                    Persoană Fizică / Bloc
-                  </button>
+                  <h3>Formular Solicitare Vânzare Ulei</h3>
+                  <p>Aprovizionare rapidă & prețuri avantajoase de distribuitor</p>
                 </div>
 
                 <input
@@ -197,57 +179,65 @@ export default function ContactForm() {
                       type="email"
                       name="email"
                       required
-                      placeholder="office@tkm-oil.ro"
+                      placeholder="office@restaurant.ro"
                       value={formData.email}
                       onChange={handleChange}
                     />
                   </div>
 
                   <div className={styles.formGroup}>
-                    <label htmlFor="city">Oraș / Județ *</label>
+                    <label htmlFor="company">Nume Firmă / Restaurant *</label>
                     <input
-                      id="city"
+                      id="company"
                       type="text"
-                      name="city"
+                      name="company"
                       required
-                      placeholder="Ex: București, Sector 1"
-                      value={formData.city}
+                      placeholder="Ex: Bistro Gourmet SRL"
+                      value={formData.company}
                       onChange={handleChange}
                     />
                   </div>
                 </div>
 
-                {clientType === 'horeca' && (
-                  <div className={styles.rowTwo}>
-                    <div className={styles.formGroup}>
-                      <label htmlFor="company">Nume Companie / Restaurant *</label>
-                      <input
-                        id="company"
-                        type="text"
-                        name="company"
-                        required={clientType === 'horeca'}
-                        placeholder="Ex: Bistro Restaurant SRL"
-                        value={formData.company}
-                        onChange={handleChange}
-                      />
-                    </div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="address">Adresă de Livrare *</label>
+                  <input
+                    id="address"
+                    type="text"
+                    name="address"
+                    required
+                    placeholder="Ex: Str. Principală nr. 15, Cluj-Napoca"
+                    value={formData.address}
+                    onChange={handleChange}
+                  />
+                </div>
 
-                    <div className={styles.formGroup}>
-                      <label htmlFor="estimatedVolume">Volum Lunar Estimat</label>
-                      <select
-                        id="estimatedVolume"
-                        name="estimatedVolume"
-                        value={formData.estimatedVolume}
-                        onChange={handleChange}
-                      >
-                        <option value="30-50L">30 - 50 Litri</option>
-                        <option value="50-100L">50 - 100 Litri</option>
-                        <option value="100-300L">100 - 300 Litri</option>
-                        <option value="300L+">Peste 300 Litri (IBC)</option>
-                      </select>
-                    </div>
+                <div className={styles.rowTwo}>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="oilType">Tip Ulei Solicitat *</label>
+                    <input
+                      id="oilType"
+                      type="text"
+                      name="oilType"
+                      required
+                      placeholder="Ex: floarea soarelui, palmier, high oleic"
+                      value={formData.oilType}
+                      onChange={handleChange}
+                    />
                   </div>
-                )}
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="quantityLiters">Cantitate Estimată (Litri)</label>
+                    <input
+                      id="quantityLiters"
+                      type="text"
+                      name="quantityLiters"
+                      placeholder="Ex: 100 litri, 500 litri etc."
+                      value={formData.quantityLiters}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
 
                 <div className={styles.formGroup}>
                   <label htmlFor="message">Detalii Suplimentare / Observații</label>
@@ -255,7 +245,7 @@ export default function ContactForm() {
                     id="message"
                     name="message"
                     rows={3}
-                    placeholder="Specificați dacă aveți nevoie de bidoane albe TKM, butoaie 200L sau curățare separatoare de grăsimi..."
+                    placeholder="Specificați frecvența dorită de livrare sau dacă doriți compensare cu ulei alimentar uzat..."
                     value={formData.message}
                     onChange={handleChange}
                   />
@@ -271,12 +261,12 @@ export default function ContactForm() {
                   type="submit"
                   className={styles.submitBtn}
                   disabled={status === 'submitting'}
-                  id="form-submit-btn"
+                  id="vanzare-submit-btn"
                 >
                   {status === 'submitting' ? (
                     <>
                       <Loader2 size={18} style={{ animation: 'spin 1s linear infinite' }} />
-                      <span>Se trimite...</span>
+                      <span>Se trimite comanda...</span>
                     </>
                   ) : (
                     <>

@@ -46,24 +46,21 @@ export default function ColectareUleiUzatPage() {
                   <div style={{ padding: '1.25rem', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.3)', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <Flame size={28} style={{ color: '#d4af37' }} />
                     <div>
-                      <strong style={{ color: '#fff', fontSize: '1.1rem' }}>18 L Ulei Palmier (Mr. Chef)</strong>
-                      <div style={{ color: '#9ca3af', fontSize: '0.875rem' }}>pentru fiecare 50 kg de ulei alimentar uzat predat</div>
+                      <strong style={{ color: '#fff', fontSize: '1.1rem' }}>Ulei Palmier</strong>
                     </div>
                   </div>
 
                   <div style={{ padding: '1.25rem', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.3)', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <Sun size={28} style={{ color: '#d4af37' }} />
                     <div>
-                      <strong style={{ color: '#fff', fontSize: '1.1rem' }}>20 L Ulei Floarea Soarelui (Spornic/Surâsul Soarelui)</strong>
-                      <div style={{ color: '#9ca3af', fontSize: '0.875rem' }}>pentru fiecare 50 kg de ulei alimentar uzat predat</div>
+                      <strong style={{ color: '#fff', fontSize: '1.1rem' }}>Ulei Floarea Soarelui</strong>
                     </div>
                   </div>
 
                   <div style={{ padding: '1.25rem', background: 'rgba(14, 133, 87, 0.15)', border: '1px solid rgba(52, 211, 153, 0.3)', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <Banknote size={28} style={{ color: '#34d399' }} />
                     <div>
-                      <strong style={{ color: '#fff', fontSize: '1.1rem' }}>Achiziție cu Plată pe Loc (2,50 - 3,00 LEI + TVA / KG)</strong>
-                      <div style={{ color: '#9ca3af', fontSize: '0.875rem' }}>Dacă preferi banii, decontăm direct contravaloarea uleiului alimentar uzat</div>
+                      <strong style={{ color: '#fff', fontSize: '1.1rem' }}>Contravaloarea în bani</strong>
                     </div>
                   </div>
                 </div>

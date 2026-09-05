@@ -4,8 +4,6 @@ import { Droplet, Phone, Mail } from 'lucide-react';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
-  const cities = ['București', 'Cluj-Napoca', 'Timișoara', 'Iași', 'Constanța', 'Brașov', 'Craiova', 'Galați', 'Ploiești', 'Oradea'];
-
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -35,11 +33,10 @@ export default function Footer() {
           <div className={styles.col}>
             <h4>Servicii TKM</h4>
             <ul>
-              <li><a href="#servicii">Colectare Ulei Uzat HORECA</a></li>
-              <li><a href="#servicii">Schimb & Valorificare Recipienți</a></li>
-              <li><a href="#servicii">Plată & Bonificații pe Loc</a></li>
-              <li><a href="#servicii">Colectare Separatoare de Grăsimi</a></li>
-              <li><a href="#autorizatie">Certificat Oficial ANPM</a></li>
+              <li><Link href="/servicii/colectare-ulei-uzat">Colectare Ulei Uzat HORECA</Link></li>
+              <li><Link href="/servicii/vanzare-ulei">Vânzare & Distribuție Ulei</Link></li>
+              <li><Link href="/servicii/separatoare-grasimi">Colectare Separatoare de Grăsimi</Link></li>
+              <li><Link href="/autorizatii">Certificat Oficial ANPM</Link></li>
             </ul>
           </div>
 
@@ -49,7 +46,7 @@ export default function Footer() {
               <li>
                 <a href="tel:0746405269" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#d4af37', fontWeight: 700 }}>
                   <Phone size={14} />
-                  <span>0746 405 259</span>
+                  <span>0746 405 269</span>
                 </a>
               </li>
               <li>
@@ -68,13 +65,11 @@ export default function Footer() {
 
           <div className={styles.col}>
             <h4>Acoperire Națională</h4>
-            <p style={{ fontSize: '0.85rem', marginBottom: '0.75rem' }}>
-              Operăm cu autospeciale autorizate în toate județele:
+            <p style={{ fontSize: '0.85rem', lineHeight: '1.6', color: '#9ca3af' }}>
+              Asigurăm colectare și distribuție rapidă în toate județele din România prin flota noastră dedicată de autospeciale autorizate.
             </p>
-            <div className={styles.citiesList}>
-              {cities.map((city, idx) => (
-                <span key={idx}>{city}</span>
-              ))}
+            <div style={{ marginTop: '0.75rem', display: 'inline-block', padding: '0.35rem 0.75rem', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.3)', borderRadius: '6px', fontSize: '0.75rem', color: '#d4af37', fontWeight: 700 }}>
+              ✓ Toate județele României
             </div>
           </div>
         </div>

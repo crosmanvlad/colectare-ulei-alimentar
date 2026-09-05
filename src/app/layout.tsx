@@ -9,7 +9,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'TKM OIL GROUP SRL | Colectare Ulei Uzat Alimentar & Separatoare Grăsimi',
-  description: 'TKM OIL GROUP SRL - „Ulei uzat, resurse pentru viitor”. Colectare autorizată ANPM de ulei uzat alimentar și grăsimi pentru restaurante, HORECA și persoane fizice. Recipienti gratuiți, certificat mediu pe loc și plată pe loc. Telefon: 0746 405 259.',
+  description: 'TKM OIL GROUP SRL - „Ulei uzat, resurse pentru viitor”. Colectare autorizată ANPM de ulei uzat alimentar și grăsimi pentru restaurante, HORECA și persoane fizice. Recipienti gratuiți, certificat mediu pe loc și plată pe loc. Telefon: 0746 405 269.',
   keywords: [
     'TKM OIL GROUP SRL',
     'ulei uzat resurse pentru viitor',

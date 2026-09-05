@@ -12,8 +12,7 @@ export default function RewardsBanner() {
             <Flame size={24} />
           </div>
           <div className={styles.textInfo}>
-            <strong>18 L Ulei Palmier (Mr. Chef)</strong>
-            <span>pentru fiecare 50 kg de ulei alimentar uzat</span>
+            <strong>Ulei Palmier</strong>
           </div>
         </div>
 
@@ -22,8 +21,7 @@ export default function RewardsBanner() {
             <Sun size={24} />
           </div>
           <div className={styles.textInfo}>
-            <strong>20 L Ulei Floarea Soarelui (Spornic/Surâsul Soarelui)</strong>
-            <span>pentru fiecare 50 kg de ulei alimentar uzat</span>
+            <strong>Ulei Floarea Soarelui</strong>
           </div>
         </div>
 
@@ -32,8 +30,7 @@ export default function RewardsBanner() {
             <Coins size={24} />
           </div>
           <div className={styles.textInfo}>
-            <strong>2,50 - 3,00 LEI + TVA / KG</strong>
-            <span>pentru fiecare kg de ulei alimentar uzat predat</span>
+            <strong>Contravaloarea în bani</strong>
           </div>
         </div>
       </div>

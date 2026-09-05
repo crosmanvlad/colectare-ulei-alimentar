@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Droplets, ShieldAlert, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Droplets, ShieldAlert, ArrowRight, CheckCircle2, Sun } from 'lucide-react';
 import styles from './Servicii.module.scss';
 
 export default function ServiciiOverview() {
@@ -82,6 +82,33 @@ export default function ServiciiOverview() {
 
                 <div className={styles.cardActions}>
                   <Link href="/servicii/separatoare-grasimi" className={styles.detailBtn}>
+                    <span>Află Toate Detaliile</span>
+                    <ArrowRight size={18} />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Service 3 */}
+              <div className={styles.serviceCard}>
+                <div className={styles.cardHeader}>
+                  <div className={styles.iconBox}>
+                    <Sun size={32} />
+                  </div>
+                  <h3>Vânzare & Distribuție Ulei</h3>
+                </div>
+
+                <p className={styles.cardDesc}>
+                  Aprovizionare sigură cu uleiuri alimentare de calitate superioară (floarea-soarelui, palmier, high-oleic) pentru restaurante și rețele HoReCa. Livrare promptă și posibilitate de compensare cu ulei uzat.
+                </p>
+
+                <ul className={styles.featureList}>
+                  <li><CheckCircle2 size={18} /><span>Floarea-soarelui, palmier fracționat și high-oleic</span></li>
+                  <li><CheckCircle2 size={18} /><span>Livrare directă la locație cu autospeciale autorizate</span></li>
+                  <li><CheckCircle2 size={18} /><span>Prețuri de distribuitor & opțiune compensare cu ulei uzat</span></li>
+                </ul>
+
+                <div className={styles.cardActions}>
+                  <Link href="/servicii/vanzare-ulei" className={styles.detailBtn}>
                     <span>Află Toate Detaliile</span>
                     <ArrowRight size={18} />
                   </Link>
