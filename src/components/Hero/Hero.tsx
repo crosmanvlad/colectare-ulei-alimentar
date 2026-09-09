@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShieldCheck, FileText, Banknote, MapPin, PhoneCall, Calculator } from 'lucide-react';
+import { ShieldCheck, Droplet, Coins, MapPin, PhoneCall, LayoutGrid } from 'lucide-react';
 import styles from './Hero.module.scss';
 
 export default function Hero() {
@@ -12,7 +12,9 @@ export default function Hero() {
         <div className={styles.heroGrid}>
           <div className={styles.heroContent}>
             <h1 className={styles.title}>
-              TRANSFORMĂM <span className={styles.highlight}>ULEIUL UZAT</span> ÎN VALOARE.
+              TRANSFORMĂM <br />
+              <span className={styles.highlight}>ULEIUL UZAT</span> <br />
+              ÎN VALOARE.
             </h1>
 
             <p className={styles.description}>
@@ -21,20 +23,31 @@ export default function Hero() {
 
             <div className={styles.featuresRow}>
               <div className={styles.featureItem}>
-                <ShieldCheck size={20} />
-                <span>COLECTARE AUTORIZATĂ</span>
+                <div className={styles.featureIcon}>
+                  <ShieldCheck size={26} />
+                </div>
+                <span>COLECTARE<br />AUTORIZATĂ</span>
               </div>
+
               <div className={styles.featureItem}>
-                <FileText size={20} />
-                <span>TRASABILITATE COMPLETĂ</span>
+                <div className={styles.featureIcon}>
+                  <Droplet size={26} />
+                </div>
+                <span>TRASABILITATE<br />COMPLETĂ</span>
               </div>
+
               <div className={styles.featureItem}>
-                <Banknote size={20} />
-                <span>PLATĂ PE LOC</span>
+                <div className={styles.featureIcon}>
+                  <Coins size={26} />
+                </div>
+                <span>PLATĂ<br />PE LOC</span>
               </div>
+
               <div className={styles.featureItem}>
-                <MapPin size={20} />
-                <span>ACOPERIRE NAȚIONALĂ</span>
+                <div className={styles.featureIcon}>
+                  <MapPin size={26} />
+                </div>
+                <span>ACOPERIRE<br />NAȚIONALĂ</span>
               </div>
             </div>
 
@@ -44,9 +57,9 @@ export default function Hero() {
                 <span>SOLICITĂ COLECTARE</span>
               </Link>
 
-              <a href="#calculator" className={styles.secondaryCta} id="hero-secondary-cta">
-                <Calculator size={18} />
-                <span>CALCULEAZĂ CÂȘTIGUL</span>
+              <a href="#servicii" className={styles.secondaryCta} id="hero-secondary-cta">
+                <LayoutGrid size={18} />
+                <span>VEZI SERVICIILE</span>
               </a>
             </div>
           </div>
@@ -59,7 +72,7 @@ export default function Hero() {
                 width={800}
                 height={500}
                 priority
-                style={{ width: '100%', height: 'auto', borderRadius: '16px' }}
+                className={styles.heroImg}
               />
             </div>
           </div>
@@ -80,8 +93,10 @@ export default function Hero() {
             <div className={styles.statLbl}>ANI DE EXPERIENȚĂ</div>
           </div>
           <div className={styles.statItem}>
-            <div className={styles.statVal}>COMPANIE</div>
-            <div className={styles.statLbl}>RESPONSABILĂ</div>
+            <div className={styles.statIconBox}>
+              <ShieldCheck size={28} />
+            </div>
+            <div className={styles.statLbl}>COMPANIE RESPONSABILĂ</div>
           </div>
         </div>
       </div>

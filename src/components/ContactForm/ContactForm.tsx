@@ -14,8 +14,7 @@ export default function ContactForm() {
     company: '',
     phone: '',
     email: '',
-    city: '',
-    estimatedVolume: '50-100L',
+    address: '',
     message: '',
     honeypot: ''
   });
@@ -52,8 +51,7 @@ export default function ContactForm() {
         company: '',
         phone: '',
         email: '',
-        city: '',
-        estimatedVolume: '50-100L',
+        address: '',
         message: '',
         honeypot: ''
       });
@@ -204,48 +202,31 @@ export default function ContactForm() {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <label htmlFor="city">Oraș / Județ *</label>
+                    <label htmlFor="address">Adresă *</label>
                     <input
-                      id="city"
+                      id="address"
                       type="text"
-                      name="city"
+                      name="address"
                       required
-                      placeholder="Ex: București, Sector 1"
-                      value={formData.city}
+                      placeholder="Ex: Str. Principală nr. 10, București"
+                      value={formData.address}
                       onChange={handleChange}
                     />
                   </div>
                 </div>
 
                 {clientType === 'horeca' && (
-                  <div className={styles.rowTwo}>
-                    <div className={styles.formGroup}>
-                      <label htmlFor="company">Nume Companie / Restaurant *</label>
-                      <input
-                        id="company"
-                        type="text"
-                        name="company"
-                        required={clientType === 'horeca'}
-                        placeholder="Ex: Bistro Restaurant SRL"
-                        value={formData.company}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    <div className={styles.formGroup}>
-                      <label htmlFor="estimatedVolume">Volum Lunar Estimat</label>
-                      <select
-                        id="estimatedVolume"
-                        name="estimatedVolume"
-                        value={formData.estimatedVolume}
-                        onChange={handleChange}
-                      >
-                        <option value="30-50L">30 - 50 Litri</option>
-                        <option value="50-100L">50 - 100 Litri</option>
-                        <option value="100-300L">100 - 300 Litri</option>
-                        <option value="300L+">Peste 300 Litri (IBC)</option>
-                      </select>
-                    </div>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="company">Nume Companie / Restaurant *</label>
+                    <input
+                      id="company"
+                      type="text"
+                      name="company"
+                      required={clientType === 'horeca'}
+                      placeholder="Ex: Bistro Restaurant SRL"
+                      value={formData.company}
+                      onChange={handleChange}
+                    />
                   </div>
                 )}
 

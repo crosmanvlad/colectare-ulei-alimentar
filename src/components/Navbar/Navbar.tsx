@@ -46,10 +46,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className={styles.logo} onClick={closeMobileMenu} id="nav-logo">
             <Image
-              src="/images/tkm/logo.jpeg"
-              alt="TKM OIL GROUP SRL - Colectam responsabil, protejam viitorul"
-              width={200}
-              height={65}
+              src="/images/tkm/new-logo.png"
+              alt="TKM OIL GROUP SRL - Ulei Uzat, Resurse pentru Viitor"
+              width={220}
+              height={90}
               priority
               className={styles.logoImg}
             />
@@ -192,13 +192,17 @@ export default function Navbar() {
           {/* Right Top Contact Details & Hamburger Button */}
           <div className={styles.navActions}>
             <div className={styles.contactTop}>
-              <a href="tel:0746405269" className={styles.phoneBtn} id="nav-phone-call">
-                <Phone size={15} />
-                <span>0746 405 269</span>
-              </a>
-              <a href="mailto:office@tkm-oil.ro" className={styles.emailSub}>
-                office@tkm-oil.ro
-              </a>
+              <div className={styles.phoneIconCircle}>
+                <Phone size={18} />
+              </div>
+              <div className={styles.contactDetails}>
+                <a href="tel:0746405269" className={styles.phoneBtn} id="nav-phone-call">
+                  0746405269
+                </a>
+                <a href="mailto:office@tkm-oil.ro" className={styles.emailSub}>
+                  office@tkm-oil.ro
+                </a>
+              </div>
             </div>
 
             <button

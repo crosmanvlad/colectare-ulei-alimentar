@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import '../styles/globals.scss';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp/FloatingWhatsApp';
 
 export const viewport: Viewport = {
-  themeColor: '#040d0a',
+  themeColor: '#ffffff',
   width: 'device-width',
   initialScale: 1,
 };
@@ -109,7 +110,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <FloatingWhatsApp />
+      </body>
     </html>
   );
 }

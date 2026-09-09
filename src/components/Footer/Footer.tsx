@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { Droplet, Phone, Mail } from 'lucide-react';
+import Image from 'next/image';
+import { Phone, Mail } from 'lucide-react';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
@@ -10,14 +11,14 @@ export default function Footer() {
         <div className={styles.topGrid}>
           <div className={styles.brandCol}>
             <Link href="/" className={styles.logo}>
-              <div className={styles.logoIcon}>
-                <Droplet size={22} fill="currentColor" />
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
-                <span style={{ fontWeight: 800, fontSize: '1.2rem', color: '#fff' }}>
-                  TKM <span style={{ color: '#d4af37' }}>OIL</span>
-                </span>
-                <span style={{ fontSize: '0.65rem', color: '#9ca3af', letterSpacing: '0.1em' }}>GROUP SRL</span>
+              <div style={{ background: '#ffffff', padding: '6px 12px', borderRadius: '8px', display: 'inline-block' }}>
+                <Image
+                  src="/images/tkm/new-logo.png"
+                  alt="TKM OIL GROUP SRL"
+                  width={160}
+                  height={49}
+                  style={{ height: '36px', width: 'auto', display: 'block' }}
+                />
               </div>
             </Link>
             <p>

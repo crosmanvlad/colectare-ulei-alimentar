@@ -7,15 +7,18 @@
   width: 100%;
   z-index: 1000;
   padding: 0.85rem 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   @include transition-smooth;
 
   &.scrolled {
     padding: 0.55rem 0;
-    background: rgba(4, 13, 10, 0.96);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -33,11 +36,15 @@
 
   .logoImg {
     width: auto;
-    height: 48px;
+    height: 70px;
     object-fit: contain;
 
+    @media (max-width: 768px) {
+      height: 54px;
+    }
+
     @media (max-width: 480px) {
-      height: 40px;
+      height: 48px;
     }
   }
 }
@@ -49,8 +56,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
   z-index: 1000;
 
   &.showBackdrop {
@@ -76,12 +83,11 @@
       width: 320px;
       max-width: 85vw;
       height: 100vh;
-      background: rgba(5, 18, 14, 0.98);
-      backdrop-filter: blur(24px);
+      background: #ffffff;
       padding: 5.5rem 1.75rem 2rem 1.75rem;
-      border-left: 1px solid rgba(212, 175, 55, 0.3);
+      border-left: 1px solid #e5e7eb;
       gap: 1.15rem;
-      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.9);
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
       overflow-y: auto;
       z-index: 1001;
       align-items: stretch;
@@ -94,7 +100,7 @@
 }
 
 .navLink {
-  color: $text-main;
+  color: #1f2937;
   font-family: $font-heading;
   font-weight: 700;
   font-size: 0.9rem;
@@ -105,8 +111,9 @@
   align-items: center;
   justify-content: space-between;
 
-  &:hover, &.active {
-    color: $color-accent-gold;
+  &:hover,
+  &.active {
+    color: #093826;
   }
 
   &::after {
@@ -125,7 +132,8 @@
     }
   }
 
-  &:hover::after, &.active::after {
+  &:hover::after,
+  &.active::after {
     width: 100%;
   }
 
@@ -179,31 +187,30 @@
     top: 100%;
     left: 0;
     min-width: 270px;
-    background: rgba(6, 19, 14, 0.98);
-    backdrop-filter: blur(20px);
-    border: 1px solid $border-glass-gold;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
     border-radius: $radius-md;
     padding: 0.75rem 0;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 
     a {
       display: block;
       padding: 0.65rem 1.25rem;
-      color: $text-main;
+      color: #1f2937;
       font-size: 0.875rem;
       font-weight: 600;
       @include transition-smooth;
 
       &:hover {
-        background: rgba(212, 175, 55, 0.15);
-        color: $color-accent-gold;
+        background: #f8fafc;
+        color: #093826;
       }
     }
 
     .subLinkOverview {
       color: $color-accent-gold;
       font-weight: 700;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid #e5e7eb;
       margin-bottom: 0.25rem;
     }
 
@@ -216,7 +223,7 @@
     @media (max-width: 1024px) {
       position: static;
       border: none;
-      background: rgba(255, 255, 255, 0.03);
+      background: #f8fafc;
       border-radius: $radius-sm;
       margin-top: 0.5rem;
       box-shadow: none;
@@ -242,7 +249,7 @@
     gap: 0.75rem;
     margin-top: 1.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #e5e7eb;
   }
 
   .mobileCallBtn {
@@ -252,7 +259,7 @@
     gap: 0.5rem;
     background: rgba(212, 175, 55, 0.15);
     border: 1px solid rgba(212, 175, 55, 0.4);
-    color: $color-accent-gold;
+    color: #927011;
     font-family: $font-heading;
     font-weight: 800;
     font-size: 0.95rem;
@@ -266,7 +273,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    color: $text-muted;
+    color: #6b7280;
     font-size: 0.85rem;
     text-decoration: none;
   }
@@ -277,7 +284,7 @@
     justify-content: center;
     gap: 0.5rem;
     background: #093826;
-    border: 1px solid $color-accent-gold;
+    border: 1px solid #093826;
     color: #ffffff;
     font-family: $font-heading;
     font-weight: 800;
@@ -297,35 +304,44 @@
 
 .contactTop {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  gap: 0.75rem;
 
-  .phoneBtn {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: $text-main;
-    font-family: $font-heading;
-    font-weight: 800;
-    font-size: 1rem;
-    letter-spacing: 0.02em;
-
-    svg {
-      color: $color-accent-gold;
-    }
-
-    &:hover {
-      color: $color-accent-gold;
-    }
+  .phoneIconCircle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #093826;
+    color: #ffffff;
+    @include flex-center;
+    flex-shrink: 0;
   }
 
-  .emailSub {
-    font-size: 0.75rem;
-    color: $text-muted;
-    text-decoration: none;
+  .contactDetails {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
 
-    &:hover {
-      color: $color-primary-light;
+    .phoneBtn {
+      color: #111827;
+      font-family: $font-heading;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+
+      &:hover {
+        color: #0e8557;
+      }
+    }
+
+    .emailSub {
+      font-size: 0.78rem;
+      color: #6b7280;
+      text-decoration: none;
+
+      &:hover {
+        color: #0e8557;
+      }
     }
   }
 
@@ -338,7 +354,7 @@
   display: none;
   background: transparent;
   border: none;
-  color: $color-accent-gold;
+  color: #111827;
   cursor: pointer;
   padding: 0.4rem;
 

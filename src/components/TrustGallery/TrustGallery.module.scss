@@ -2,9 +2,9 @@
 
 .section {
   padding: 6rem 0;
-  background: rgba(4, 13, 10, 0.6);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .header {
@@ -27,7 +27,7 @@
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    color: $text-main;
+    color: $color-primary;
   }
 
   .subtitle {
@@ -79,7 +79,7 @@
     font-family: $font-heading;
     font-size: 1.15rem;
     font-weight: 700;
-    color: $text-main;
+    color: $color-primary;
     margin-bottom: 0.35rem;
   }
 

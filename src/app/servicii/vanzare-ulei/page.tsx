@@ -35,34 +35,34 @@ export default function VanzareUleiPage() {
 
             <div className={styles.detailSplit}>
               <div>
-                <h3 style={{ fontFamily: 'Outfit', fontSize: '2rem', fontWeight: 800, color: '#f9fafb', marginBottom: '1.25rem' }}>
-                  Uleiuri Premium pentru <span style={{ color: '#d4af37' }}>Orice Bucătărie</span>
+                <h3 style={{ fontFamily: 'Outfit', fontSize: '2rem', fontWeight: 800, color: '#093826', marginBottom: '1.25rem' }}>
+                  Uleiuri Premium pentru <span style={{ color: '#c59b27' }}>Orice Bucătărie</span>
                 </h3>
-                <p style={{ color: '#9ca3af', fontSize: '1.05rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
+                <p style={{ color: '#4b5563', fontSize: '1.05rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
                   Gama noastră acoperă toate nevoile operaționale ale sectorului HoReCa — de la preparate delicate până la prăjire intensivă la volume mari:
                 </p>
 
                 <div className={styles.benefitList}>
                   <div className={styles.benefitCard}>
-                    <Sun size={28} style={{ color: '#d4af37' }} />
+                    <Sun size={28} style={{ color: '#c59b27' }} />
                     <div>
-                      <strong>Ulei de Floarea-Soarelui (Spornic / Surâsul Soarelui)</strong>
+                      <strong style={{ color: '#093826' }}>Ulei de Floarea-Soarelui (Spornic / Surâsul Soarelui)</strong>
                       <p>100% rafinat, gust neutru, culoare aurie limpede. Ideal pentru gătit universal, sosuri și preparare la cald.</p>
                     </div>
                   </div>
 
                   <div className={styles.benefitCard}>
-                    <Flame size={28} style={{ color: '#d4af37' }} />
+                    <Flame size={28} style={{ color: '#c59b27' }} />
                     <div>
-                      <strong>Ulei de Palmier Fracționat (Mr. Chef)</strong>
+                      <strong style={{ color: '#093826' }}>Ulei de Palmier Fracționat (Mr. Chef)</strong>
                       <p>Special formulat pentru friteuze profesionale. Rezistență termică până la 220°C, zero mirosuri și randament maxim per porție.</p>
                     </div>
                   </div>
 
                   <div className={`${styles.benefitCard} ${styles.green}`}>
-                    <Sparkles size={28} style={{ color: '#34d399' }} />
+                    <Sparkles size={28} style={{ color: '#0e8557' }} />
                     <div>
-                      <strong>Ulei High-Oleic Professional</strong>
+                      <strong style={{ color: '#093826' }}>Ulei High-Oleic Professional</strong>
                       <p>Peste 80% acid oleic, rezistență excepțională la oxidare și durată de viață extinsă în băile de prăjire.</p>
                     </div>
                   </div>
@@ -82,27 +82,27 @@ export default function VanzareUleiPage() {
 
             {/* Quick Benefits Banner */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem', marginBottom: '4.5rem' }}>
-              <div style={{ padding: '1.5rem', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '12px', display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-                <Truck size={24} style={{ color: '#d4af37', flexShrink: 0, marginTop: '0.2rem' }} />
+              <div style={{ padding: '1.5rem', background: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.04)', display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                <Truck size={24} style={{ color: '#c59b27', flexShrink: 0, marginTop: '0.2rem' }} />
                 <div>
-                  <strong style={{ color: '#fff', fontSize: '1.05rem', display: 'block', marginBottom: '0.25rem', fontFamily: 'Outfit' }}>Livrare Directă la Locație</strong>
-                  <p style={{ color: '#9ca3af', fontSize: '0.875rem', lineHeight: 1.5, margin: 0 }}>Operăm cu autospeciale autorizate și asigurăm transport rapid în toate județele.</p>
+                  <strong style={{ color: '#093826', fontSize: '1.05rem', display: 'block', marginBottom: '0.25rem', fontFamily: 'Outfit' }}>Livrare Directă la Locație</strong>
+                  <p style={{ color: '#4b5563', fontSize: '0.875rem', lineHeight: 1.5, margin: 0 }}>Operăm cu autospeciale autorizate și asigurăm transport rapid în toate județele.</p>
                 </div>
               </div>
 
-              <div style={{ padding: '1.5rem', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '12px', display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-                <RefreshCw size={24} style={{ color: '#d4af37', flexShrink: 0, marginTop: '0.2rem' }} />
+              <div style={{ padding: '1.5rem', background: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.04)', display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                <RefreshCw size={24} style={{ color: '#c59b27', flexShrink: 0, marginTop: '0.2rem' }} />
                 <div>
-                  <strong style={{ color: '#fff', fontSize: '1.05rem', display: 'block', marginBottom: '0.25rem', fontFamily: 'Outfit' }}>Compensare cu Uleiul Uzat</strong>
-                  <p style={{ color: '#9ca3af', fontSize: '0.875rem', lineHeight: 1.5, margin: 0 }}>Predai uleiul uzat din bucătărie și primești direct la schimb ulei proaspăt.</p>
+                  <strong style={{ color: '#093826', fontSize: '1.05rem', display: 'block', marginBottom: '0.25rem', fontFamily: 'Outfit' }}>Compensare cu Uleiul Uzat</strong>
+                  <p style={{ color: '#4b5563', fontSize: '0.875rem', lineHeight: 1.5, margin: 0 }}>Predai uleiul uzat din bucătărie și primești direct la schimb ulei proaspăt.</p>
                 </div>
               </div>
 
-              <div style={{ padding: '1.5rem', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '12px', display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-                <BadgePercent size={24} style={{ color: '#d4af37', flexShrink: 0, marginTop: '0.2rem' }} />
+              <div style={{ padding: '1.5rem', background: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.04)', display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                <BadgePercent size={24} style={{ color: '#c59b27', flexShrink: 0, marginTop: '0.2rem' }} />
                 <div>
-                  <strong style={{ color: '#fff', fontSize: '1.05rem', display: 'block', marginBottom: '0.25rem', fontFamily: 'Outfit' }}>Prețuri Directe & Predictibile</strong>
-                  <p style={{ color: '#9ca3af', fontSize: '0.875rem', lineHeight: 1.5, margin: 0 }}>Condiții comerciale transparente, fără intermediari și discounturi de volum.</p>
+                  <strong style={{ color: '#093826', fontSize: '1.05rem', display: 'block', marginBottom: '0.25rem', fontFamily: 'Outfit' }}>Prețuri Directe & Predictibile</strong>
+                  <p style={{ color: '#4b5563', fontSize: '0.875rem', lineHeight: 1.5, margin: 0 }}>Condiții comerciale transparente, fără intermediari și discounturi de volum.</p>
                 </div>
               </div>
             </div>

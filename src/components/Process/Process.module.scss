@@ -1,98 +1,92 @@
 @use '../../styles/variables.scss' as *;
 
-.section {
-  padding: 2rem 0;
+.processBox {
+  padding: 0.5rem 0;
+}
+
+.title {
+  font-family: $font-heading;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 900;
+  margin-bottom: 2.25rem;
+  color: #093826;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.stepsRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
 
   @media (max-width: 768px) {
-    padding: 1.5rem 0;
-  }
-}
-
-.header {
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto 2.5rem auto;
-
-  .sectionBadge {
-    display: inline-block;
-    color: $color-accent-gold;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
   }
 
-  .title {
-    font-family: $font-heading;
-    font-size: clamp(1.75rem, 4vw, 2.35rem);
-    font-weight: 800;
-    margin-bottom: 0.75rem;
-    color: $text-main;
-  }
-
-  .subtitle {
-    color: $text-muted;
-    font-size: clamp(0.9rem, 2vw, 1.05rem);
-  }
-}
-
-.stepsGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-
-  @media (max-width: 500px) {
+  @media (max-width: 480px) {
     grid-template-columns: 1fr;
   }
 }
 
-.stepCard {
-  @include glass-panel;
-  border-radius: $radius-lg;
-  padding: 1.75rem 1.25rem;
-  position: relative;
-  @include transition-smooth;
+.stepItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-  &:hover {
-    transform: translateY(-4px);
-    border-color: rgba(212, 175, 55, 0.4);
-    box-shadow: $shadow-gold-glow;
-  }
-
-  .stepNumber {
-    font-family: $font-heading;
-    font-size: 2.25rem;
-    font-weight: 800;
-    color: rgba(255, 255, 255, 0.1);
-    position: absolute;
-    top: 1rem;
-    right: 1.25rem;
-    line-height: 1;
-  }
-
-  .iconBox {
-    width: 44px;
-    height: 44px;
-    border-radius: $radius-md;
-    background: rgba(212, 175, 55, 0.12);
-    border: 1px solid rgba(212, 175, 55, 0.25);
-    color: $color-accent-gold;
+  .circleIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fefce8;
+    border: 1.5px solid rgba(212, 175, 55, 0.45);
+    color: #093826;
     @include flex-center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.12);
+    @include transition-smooth;
+
+    svg {
+      color: #093826;
+    }
+  }
+
+  &:hover .circleIcon {
+    transform: translateY(-3px);
+    border-color: #c59b27;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
   }
 
   .stepTitle {
     font-family: $font-heading;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: $text-main;
+    font-size: 0.92rem;
+    font-weight: 800;
+    margin-bottom: 0.35rem;
+    color: #093826;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
   }
 
   .stepDesc {
-    color: $text-muted;
-    font-size: 0.875rem;
-    line-height: 1.55;
+    color: #6b7280;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    max-width: 140px;
+  }
+}
+
+.stepArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.25rem;
+  color: #c59b27;
+
+  @media (max-width: 768px) {
+    display: none;
   }
 }

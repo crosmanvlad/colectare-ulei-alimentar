@@ -1,22 +1,26 @@
-// SCSS Variables & Design Tokens - TKM OIL GROUP SRL
-$bg-dark: #040d0a;
-$bg-card: rgba(8, 26, 19, 0.75);
-$bg-card-hover: rgba(14, 42, 31, 0.9);
-$bg-glass: rgba(255, 255, 255, 0.035);
-$border-glass: rgba(52, 211, 153, 0.16);
-$border-glass-gold: rgba(212, 175, 55, 0.3);
-$border-glass-hover: rgba(52, 211, 153, 0.4);
+// SCSS Variables & Design Tokens - TKM OIL GROUP SRL (White Theme)
+$bg-light: #ffffff;
+$bg-alt: #f9fafb;
+$bg-dark: #093322; // Deep Emerald for accents and cards
+$bg-card: #ffffff;
+$bg-card-hover: #f8fafc;
+$bg-glass: rgba(255, 255, 255, 0.9);
+$border-light: #e5e7eb;
+$border-glass: rgba(229, 231, 235, 0.9);
+$border-glass-gold: rgba(212, 175, 55, 0.4);
+$border-glass-hover: rgba(14, 133, 87, 0.4);
 
-$color-primary: #0e8557; // TKM Emerald Green
-$color-primary-light: #22c55e;
-$color-primary-dark: #064e3b;
+$color-primary: #093826; // TKM Dark Emerald Green
+$color-primary-light: #0e8557;
+$color-primary-dark: #041f15;
 
-$color-accent-amber: #f59e0b; 
-$color-accent-gold: #d4af37; // Metallic TKM Gold
+$color-accent-amber: #d97706; 
+$color-accent-gold: #c59b27; // Metallic TKM Gold
 
-$text-main: #f9fafb;
-$text-muted: #9ca3af;
-$text-subtle: #6b7280;
+$text-main: #111827; // Dark headings
+$text-body: #374151; // Body text
+$text-muted: #6b7280;
+$text-subtle: #9ca3af;
 
 $font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
 $font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -26,16 +30,14 @@ $radius-md: 16px;
 $radius-lg: 24px;
 $radius-full: 9999px;
 
-$shadow-glow: 0 0 30px rgba(14, 133, 87, 0.25);
-$shadow-gold-glow: 0 0 25px rgba(212, 175, 55, 0.25);
-$shadow-card: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
+$shadow-glow: 0 4px 20px rgba(9, 56, 38, 0.15);
+$shadow-gold-glow: 0 4px 20px rgba(197, 155, 39, 0.2);
+$shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
 
 @mixin glass-panel {
-  background: $bg-card;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid $border-glass;
-  box-shadow: $shadow-card;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
 }
 
 @mixin flex-center {

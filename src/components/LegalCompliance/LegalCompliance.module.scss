@@ -48,9 +48,10 @@
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.25rem;
+    color: $color-primary;
 
     .highlight {
-      color: $color-primary-light;
+      color: #c59b27;
     }
   }
 
@@ -88,7 +89,7 @@
         font-family: $font-heading;
         font-size: 1.1rem;
         font-weight: 700;
-        color: $text-main;
+        color: $color-primary;
         margin-bottom: 0.25rem;
       }
       p {

@@ -17,12 +17,12 @@
   font-family: $font-heading;
   font-size: clamp(1.2rem, 3.5vw, 1.5rem);
   font-weight: 800;
-  color: $text-main;
+  color: #ffffff;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
 }
 
 .itemsList {
@@ -36,23 +36,23 @@
   align-items: center;
   gap: 1rem;
   padding: 0.85rem 1rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: $radius-md;
   @include transition-smooth;
 
   &:hover {
     border-color: $color-accent-gold;
-    background: rgba(212, 175, 55, 0.08);
+    background: rgba(212, 175, 55, 0.12);
   }
 
   .iconBox {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: rgba(212, 175, 55, 0.15);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    color: $color-accent-gold;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1.5px solid rgba(212, 175, 55, 0.5);
+    color: #ffd700;
     @include flex-center;
     flex-shrink: 0;
   }
@@ -63,12 +63,12 @@
       font-family: $font-heading;
       font-size: clamp(0.95rem, 2.5vw, 1.05rem);
       font-weight: 800;
-      color: $text-main;
+      color: #ffffff;
       margin-bottom: 0.1rem;
     }
     span {
       font-size: clamp(0.78rem, 2vw, 0.85rem);
-      color: $text-muted;
+      color: rgba(255, 255, 255, 0.8);
     }
   }
 }

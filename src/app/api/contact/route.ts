@@ -33,9 +33,9 @@ export async function POST(request: Request) {
         );
       }
     } else {
-      if (!name || !phone || !email || !city) {
+      if (!name || !phone || !email || (!city && !address)) {
         return NextResponse.json(
-          { success: false, message: 'Vă rugăm să completați toate câmpurile obligatorii (Nume, Telefon, Email, Oraș).' },
+          { success: false, message: 'Vă rugăm să completați toate câmpurile obligatorii (Nume, Telefon, Email, Adresă).' },
           { status: 400 }
         );
       }

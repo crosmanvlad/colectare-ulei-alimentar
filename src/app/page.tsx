@@ -6,7 +6,6 @@ import Services from '@/components/Services/Services';
 import TrustGallery from '@/components/TrustGallery/TrustGallery';
 import LegalCompliance from '@/components/LegalCompliance/LegalCompliance';
 import Process from '@/components/Process/Process';
-import Calculator from '@/components/Calculator/Calculator';
 import Faq from '@/components/Faq/Faq';
 import ContactForm from '@/components/ContactForm/ContactForm';
 import Footer from '@/components/Footer/Footer';
@@ -32,7 +31,6 @@ export default function Home() {
         <Services />
         <TrustGallery />
         <LegalCompliance />
-        <Calculator />
         <Faq />
         <ContactForm />
       </main>

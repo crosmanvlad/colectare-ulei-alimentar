@@ -3,6 +3,7 @@
 .hero {
   position: relative;
   padding: 8.5rem 0 3rem 0;
+  background: #ffffff;
   overflow: hidden;
 
   @media (max-width: 980px) {
@@ -15,27 +16,13 @@
 }
 
 .glowBg {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(14, 133, 87, 0.18) 0%, rgba(212, 175, 55, 0.08) 50%, transparent 70%);
-  filter: blur(90px);
-  pointer-events: none;
-  z-index: 0;
-
-  @media (max-width: 600px) {
-    width: 350px;
-    height: 350px;
-  }
+  display: none;
 }
 
 .heroGrid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 3.5rem;
+  grid-template-columns: 1.05fr 1.1fr;
+  gap: 2.5rem;
   align-items: center;
 
   @media (max-width: 980px) {
@@ -50,62 +37,88 @@
 
 .title {
   font-family: $font-heading;
-  font-size: clamp(1.85rem, 4.5vw, 3.25rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
   font-weight: 900;
-  line-height: 1.15;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-  color: $text-main;
-  word-break: break-word;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+  color: #093826;
+  text-transform: uppercase;
 
   .highlight {
-    color: $color-accent-gold;
+    color: #c59b27;
   }
 }
 
 .description {
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
-  color: $text-muted;
-  margin-bottom: 1.75rem;
-  line-height: 1.65;
-  max-width: 540px;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #374151;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 520px;
 }
 
 .featuresRow {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  max-width: 520px;
 
-  @media (max-width: 480px) {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+  @media (max-width: 550px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 0.75rem;
   }
 }
 
 .featureItem {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 0.6rem;
+  flex: 1;
 
-  svg {
-    color: $color-accent-gold;
+  .featureIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1.5px solid rgba(197, 155, 39, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    color: #093826;
+    @include flex-center;
     flex-shrink: 0;
+    @include transition-smooth;
+
+    svg {
+      color: #093826;
+    }
+  }
+
+  &:hover .featureIcon {
+    border-color: #c59b27;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(197, 155, 39, 0.2);
   }
 
   span {
     font-family: $font-heading;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     font-weight: 800;
-    color: $text-main;
-    letter-spacing: 0.04em;
+    color: #111827;
+    letter-spacing: 0.03em;
+    line-height: 1.25;
+    text-transform: uppercase;
   }
 }
 
 .ctaGroup {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
 
   @media (max-width: 550px) {
@@ -129,16 +142,16 @@
   font-weight: 800;
   font-size: 0.95rem;
   letter-spacing: 0.04em;
-  padding: 0.9rem 1.75rem;
+  padding: 0.95rem 1.85rem;
   border-radius: $radius-sm;
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  box-shadow: 0 4px 25px rgba(14, 133, 87, 0.4);
+  border: 1px solid #093826;
+  box-shadow: 0 4px 20px rgba(9, 56, 38, 0.25);
   @include transition-smooth;
 
   &:hover {
     transform: translateY(-2px);
     background: #0e4e35;
-    box-shadow: 0 8px 35px rgba(14, 133, 87, 0.6);
+    box-shadow: 0 8px 30px rgba(9, 56, 38, 0.35);
   }
 }
 
@@ -146,21 +159,22 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  color: $text-main;
+  color: #111827;
   font-family: $font-heading;
   font-weight: 800;
   font-size: 0.95rem;
   letter-spacing: 0.04em;
-  padding: 0.9rem 1.75rem;
+  padding: 0.95rem 1.85rem;
   border-radius: $radius-sm;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #ffffff;
+  border: 1.5px solid #111827;
   @include transition-smooth;
 
   &:hover {
-    background: rgba(212, 175, 55, 0.12);
-    border-color: $color-accent-gold;
-    color: $color-accent-gold;
+    background: #f8fafc;
+    border-color: #093826;
+    color: #093826;
+    transform: translateY(-2px);
   }
 }
 
@@ -172,15 +186,34 @@
     position: relative;
     border-radius: $radius-lg;
     overflow: hidden;
-    @include glass-panel;
-    padding: 0.5rem;
-    border-color: rgba(212, 175, 55, 0.35);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
 
-    img {
+    /* Seamless gradient blend on desktop only */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 38%;
+      background: linear-gradient(
+        to right,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.85) 20%,
+        rgba(255, 255, 255, 0.45) 50%,
+        transparent 100%
+      );
+      z-index: 2;
+      pointer-events: none;
+
+      @media (max-width: 980px) {
+        display: none;
+      }
+    }
+
+    .heroImg {
       width: 100%;
       height: auto;
-      border-radius: $radius-md;
+      border-radius: $radius-lg;
       display: block;
       object-fit: cover;
     }
@@ -189,14 +222,14 @@
 
 .statsBar {
   margin-top: 3.5rem;
-  background: linear-gradient(90deg, #093322 0%, #154c33 50%, #093322 100%);
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  border-radius: $radius-md;
-  padding: 1.25rem 1.5rem;
+  background: linear-gradient(90deg, #051e14 0%, #093826 50%, #051e14 100%);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: $radius-lg;
+  padding: 1.4rem 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  gap: 1.5rem;
+  box-shadow: 0 10px 30px rgba(9, 56, 38, 0.2), 0 0 25px rgba(212, 175, 55, 0.15);
 
   @media (max-width: 800px) {
     grid-template-columns: repeat(2, 1fr);
@@ -212,21 +245,31 @@
 
 .statItem {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   .statVal {
     font-family: $font-heading;
-    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
     font-weight: 900;
-    color: $color-accent-gold;
+    color: #d4af37;
     line-height: 1.1;
+  }
+
+  .statIconBox {
+    color: #d4af37;
+    margin-bottom: 0.25rem;
   }
 
   .statLbl {
     font-family: $font-heading;
-    font-size: clamp(0.65rem, 2vw, 0.75rem);
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
     font-weight: 800;
-    color: $text-main;
+    color: #ffffff;
     letter-spacing: 0.06em;
-    margin-top: 0.2rem;
+    margin-top: 0.25rem;
+    text-transform: uppercase;
   }
 }
