@@ -20,19 +20,27 @@
 }
 
 .heroGrid {
-  display: grid;
-  grid-template-columns: 1.05fr 1.1fr;
-  gap: 2.5rem;
+  position: relative;
+  display: flex;
   align-items: center;
+  min-height: 520px;
 
   @media (max-width: 980px) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
     gap: 2.5rem;
   }
 }
 
 .heroContent {
-  z-index: 1;
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+
+  @media (max-width: 980px) {
+    max-width: 100%;
+  }
 }
 
 .title {
@@ -179,29 +187,57 @@
 }
 
 .heroVisual {
-  position: relative;
+  position: absolute;
+  top: -2rem;
+  right: 0vw;
+  bottom: -1rem;
+  width: 76%;
   z-index: 1;
+  pointer-events: none;
+
+  @media (max-width: 1350px) {
+    width: 72%;
+    right: -1.5rem;
+  }
+
+  @media (max-width: 1100px) {
+    width: 68%;
+    right: -1rem;
+  }
+
+  @media (max-width: 980px) {
+    position: relative;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    margin-top: 1.5rem;
+    pointer-events: auto;
+  }
 
   .imageWrapper {
     position: relative;
-    border-radius: $radius-lg;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
-    /* Seamless gradient blend on desktop only */
+    /* Gradual feather gradient on desktop blending background seamlessly with text */
     &::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
-      width: 38%;
-      background: linear-gradient(
-        to right,
-        #ffffff 0%,
-        rgba(255, 255, 255, 0.85) 20%,
-        rgba(255, 255, 255, 0.45) 50%,
-        transparent 100%
-      );
+      width: 60%;
+      background: linear-gradient(to right,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0.98) 22%,
+          rgba(255, 255, 255, 0.75) 50%,
+          rgba(255, 255, 255, 0.25) 80%,
+          transparent 100%);
       z-index: 2;
       pointer-events: none;
 
@@ -212,10 +248,16 @@
 
     .heroImg {
       width: 100%;
-      height: auto;
-      border-radius: $radius-lg;
-      display: block;
+      height: 100%;
       object-fit: cover;
+      object-position: 75% center;
+      display: block;
+
+      @media (max-width: 980px) {
+        height: auto;
+        border-radius: $radius-lg;
+        object-fit: cover;
+      }
     }
   }
 }
