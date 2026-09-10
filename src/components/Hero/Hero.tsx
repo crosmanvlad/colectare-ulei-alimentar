@@ -11,11 +11,23 @@ export default function Hero() {
       <div className="container">
         <div className={styles.heroGrid}>
           <div className={styles.heroContent}>
-            <h1 className={styles.title}>
-              TRANSFORMĂM <br />
-              <span className={styles.highlight}>ULEIUL UZAT</span> <br />
-              ÎN VALOARE.
-            </h1>
+            <div className={styles.titleWrapper}>
+              <div className={styles.mobileTitleBg}>
+                <Image
+                  src="/images/tkm/hero-tkm.png"
+                  alt="TKM OIL GROUP SRL Cisterne si Recipienti"
+                  fill
+                  sizes="100vw"
+                  priority
+                  className={styles.mobileHeroImg}
+                />
+              </div>
+              <h1 className={styles.title}>
+                TRANSFORMĂM <br />
+                <span className={styles.highlight}>ULEIUL UZAT</span> <br />
+                ÎN VALOARE.
+              </h1>
+            </div>
 
             <p className={styles.description}>
               Colectăm responsabil uleiul alimentar uzat și îl transformăm în resurse pentru un viitor mai curat.
