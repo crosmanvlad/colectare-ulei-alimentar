@@ -33,32 +33,32 @@ export default function SeparatoareGrasimiPage() {
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center', marginBottom: '4rem' }}>
               <div>
-                <h3 style={{ fontFamily: 'Outfit', fontSize: '2rem', fontWeight: 800, color: '#f9fafb', marginBottom: '1.25rem' }}>
-                  De ce să integrezi <span style={{ color: '#d4af37' }}>Curățarea Separatoarelor</span> cu TKM OIL?
+                <h3 style={{ fontFamily: 'Outfit', fontSize: '2rem', fontWeight: 800, color: '#093826', marginBottom: '1.25rem' }}>
+                  De ce să integrezi <span style={{ color: '#c59b27' }}>Curățarea Separatoarelor</span> cu TKM OIL?
                 </h3>
 
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', background: 'rgba(255,255,255,0.03)', padding: '1.25rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)' }}>
-                    <Wrench size={24} style={{ color: '#d4af37', flexShrink: 0, marginTop: '0.15rem' }} />
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', background: '#ffffff', padding: '1.25rem', borderRadius: '12px', border: '1px solid #e5e7eb', boxShadow: '0 4px 15px rgba(0,0,0,0.04)' }}>
+                    <Wrench size={24} style={{ color: '#c59b27', flexShrink: 0, marginTop: '0.15rem' }} />
                     <div>
-                      <strong style={{ color: '#fff', fontSize: '1.1rem', display: 'block', marginBottom: '0.2rem' }}>Spălare & Vidanjare Profesională</strong>
-                      <div style={{ color: '#9ca3af', fontSize: '0.9rem' }}>Echipamente de curățare sub presiune pentru eliminarea tuturor depunerilor și mirosurilor neplăcute.</div>
+                      <strong style={{ color: '#093826', fontSize: '1.1rem', display: 'block', marginBottom: '0.2rem', fontFamily: 'Outfit' }}>Spălare & Vidanjare Profesională</strong>
+                      <div style={{ color: '#4b5563', fontSize: '0.9rem' }}>Echipamente de curățare sub presiune pentru eliminarea tuturor depunerilor și mirosurilor neplăcute.</div>
                     </div>
                   </li>
 
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', background: 'rgba(255,255,255,0.03)', padding: '1.25rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)' }}>
-                    <FileCheck size={24} style={{ color: '#d4af37', flexShrink: 0, marginTop: '0.15rem' }} />
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', background: '#ffffff', padding: '1.25rem', borderRadius: '12px', border: '1px solid #e5e7eb', boxShadow: '0 4px 15px rgba(0,0,0,0.04)' }}>
+                    <FileCheck size={24} style={{ color: '#c59b27', flexShrink: 0, marginTop: '0.15rem' }} />
                     <div>
-                      <strong style={{ color: '#fff', fontSize: '1.1rem', display: 'block', marginBottom: '0.2rem' }}>Documentație Tehnică Completă</strong>
-                      <div style={{ color: '#9ca3af', fontSize: '0.9rem' }}>Proces-verbal de vidanjare și documente legale valabile pentru controalele DSVSA și ISU.</div>
+                      <strong style={{ color: '#093826', fontSize: '1.1rem', display: 'block', marginBottom: '0.2rem', fontFamily: 'Outfit' }}>Documentație Tehnică Completă</strong>
+                      <div style={{ color: '#4b5563', fontSize: '0.9rem' }}>Proces-verbal de vidanjare și documente legale valabile pentru controalele DSVSA și ISU.</div>
                     </div>
                   </li>
 
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', background: 'rgba(255,255,255,0.03)', padding: '1.25rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)' }}>
-                    <Layers size={24} style={{ color: '#d4af37', flexShrink: 0, marginTop: '0.15rem' }} />
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', background: '#ffffff', padding: '1.25rem', borderRadius: '12px', border: '1px solid #e5e7eb', boxShadow: '0 4px 15px rgba(0,0,0,0.04)' }}>
+                    <Layers size={24} style={{ color: '#c59b27', flexShrink: 0, marginTop: '0.15rem' }} />
                     <div>
-                      <strong style={{ color: '#fff', fontSize: '1.1rem', display: 'block', marginBottom: '0.2rem' }}>Management Simplificat</strong>
-                      <div style={{ color: '#9ca3af', fontSize: '0.9rem' }}>Cu cât procesul este mai simplu pentru client, cu atât serviciul este mai bun. Administrare unică.</div>
+                      <strong style={{ color: '#093826', fontSize: '1.1rem', display: 'block', marginBottom: '0.2rem', fontFamily: 'Outfit' }}>Management Simplificat</strong>
+                      <div style={{ color: '#4b5563', fontSize: '0.9rem' }}>Cu cât procesul este mai simplu pentru client, cu atât serviciul este mai bun. Administrare unică.</div>
                     </div>
                   </li>
                 </ul>

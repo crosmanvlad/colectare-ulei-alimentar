@@ -34,33 +34,33 @@ export default function ColectareUleiUzatPage() {
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center', marginBottom: '4rem' }}>
               <div>
-                <h3 style={{ fontFamily: 'Outfit', fontSize: '2rem', fontWeight: 800, color: '#f9fafb', marginBottom: '1.25rem' }}>
-                  Sistemul Câștigător: <span style={{ color: '#d4af37' }}>Primești Valoare Înapoi</span>
+                <h3 style={{ fontFamily: 'Outfit', fontSize: '2rem', fontWeight: 800, color: '#093826', marginBottom: '1.25rem' }}>
+                  Sistemul Câștigător: <span style={{ color: '#c59b27' }}>Primești Valoare Înapoi</span>
                 </h3>
-                <p style={{ color: '#9ca3af', fontSize: '1.05rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
+                <p style={{ color: '#374151', fontSize: '1.05rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
                   Una dintre diferențele importante ale modelului nostru este posibilitatea de a transforma uleiul uzat în produse pe care bucătăria ta le folosește din nou. 
-                  Este un circuit simplu: **folosești → colectăm → valorificăm → primești valoare înapoi**.
+                  Este un circuit simplu: <strong>folosești → colectăm → valorificăm → primești valoare înapoi</strong>.
                 </p>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <div style={{ padding: '1.25rem', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.3)', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <Flame size={28} style={{ color: '#d4af37' }} />
+                  <div style={{ padding: '1.25rem', background: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0, 0, 0, 0.04)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <Flame size={28} style={{ color: '#c59b27' }} />
                     <div>
-                      <strong style={{ color: '#fff', fontSize: '1.1rem' }}>Ulei Palmier</strong>
+                      <strong style={{ color: '#093826', fontSize: '1.1rem', fontFamily: 'Outfit' }}>Ulei Palmier</strong>
                     </div>
                   </div>
 
-                  <div style={{ padding: '1.25rem', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.3)', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <Sun size={28} style={{ color: '#d4af37' }} />
+                  <div style={{ padding: '1.25rem', background: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0, 0, 0, 0.04)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <Sun size={28} style={{ color: '#c59b27' }} />
                     <div>
-                      <strong style={{ color: '#fff', fontSize: '1.1rem' }}>Ulei Floarea Soarelui</strong>
+                      <strong style={{ color: '#093826', fontSize: '1.1rem', fontFamily: 'Outfit' }}>Ulei Floarea Soarelui</strong>
                     </div>
                   </div>
 
-                  <div style={{ padding: '1.25rem', background: 'rgba(14, 133, 87, 0.15)', border: '1px solid rgba(52, 211, 153, 0.3)', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <Banknote size={28} style={{ color: '#34d399' }} />
+                  <div style={{ padding: '1.25rem', background: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0, 0, 0, 0.04)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <Banknote size={28} style={{ color: '#0e8557' }} />
                     <div>
-                      <strong style={{ color: '#fff', fontSize: '1.1rem' }}>Contravaloarea în bani</strong>
+                      <strong style={{ color: '#093826', fontSize: '1.1rem', fontFamily: 'Outfit' }}>Contravaloarea în bani</strong>
                     </div>
                   </div>
                 </div>

@@ -6,8 +6,9 @@
 
 .banner {
   padding: 5rem 0 3rem 0;
-  background: linear-gradient(180deg, rgba(9, 51, 34, 0.6) 0%, rgba(4, 13, 10, 0.9) 100%);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  background: linear-gradient(90deg, #051e14 0%, #093826 50%, #051e14 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 10px 30px rgba(9, 56, 38, 0.2), 0 0 25px rgba(212, 175, 55, 0.15);
   text-align: center;
 
   .badge {
@@ -25,7 +26,7 @@
     font-family: $font-heading;
     font-size: 3rem;
     font-weight: 900;
-    color: $text-main;
+    color: #ffffff;
     margin-bottom: 0.75rem;
 
     @media (max-width: 768px) {
@@ -35,7 +36,7 @@
 
   .subtitle {
     font-size: 1.1rem;
-    color: $text-muted;
+    color: rgba(255, 255, 255, 0.85);
     max-width: 620px;
     margin: 0 auto;
   }
@@ -62,7 +63,7 @@
     font-family: $font-heading;
     font-size: 2.35rem;
     font-weight: 800;
-    color: $text-main;
+    color: $color-primary;
     margin-bottom: 1.25rem;
 
     .goldText {
@@ -73,14 +74,14 @@
   .leadParagraph {
     font-size: 1.15rem;
     font-weight: 600;
-    color: $color-primary-light;
+    color: $color-primary;
     line-height: 1.6;
     margin-bottom: 1.25rem;
   }
 
   .paragraph {
     font-size: 1.025rem;
-    color: $text-muted;
+    color: $text-body;
     line-height: 1.7;
     margin-bottom: 1.5rem;
   }
@@ -94,7 +95,7 @@
 
     p {
       font-style: italic;
-      color: $text-main;
+      color: $color-primary;
       font-size: 1.025rem;
       line-height: 1.6;
     }
@@ -104,7 +105,7 @@
     font-family: $font-heading;
     font-size: 1.5rem;
     font-weight: 800;
-    color: $text-main;
+    color: $color-primary;
     margin-bottom: 0.75rem;
   }
 }
@@ -114,11 +115,11 @@
   align-items: center;
   gap: 1.25rem;
   padding: 1.25rem 1.5rem;
-  background: rgba(9, 51, 34, 0.8);
+  background: rgba(4, 24, 17, 0.95);
   border: 1px solid rgba(212, 175, 55, 0.4);
   border-radius: $radius-md;
   margin-bottom: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(9, 56, 38, 0.2), 0 0 20px rgba(212, 175, 55, 0.12);
 
   svg {
     color: $color-accent-gold;
@@ -129,13 +130,13 @@
     display: block;
     font-family: $font-heading;
     font-size: 1.2rem;
-    color: $color-accent-gold;
+    color: #c59b27;
     margin-bottom: 0.2rem;
   }
 
   span {
     font-size: 0.875rem;
-    color: $text-muted;
+    color: rgba(255, 255, 255, 0.85);
   }
 }
 
@@ -161,6 +162,7 @@
   &:hover {
     transform: translateY(-2px);
     background: #0e4e35;
+    color: $color-accent-gold;
     box-shadow: 0 8px 35px rgba(14, 133, 87, 0.6);
   }
 }
@@ -193,9 +195,16 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: $radius-md;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  @include transition-smooth;
+
+  &:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  }
 
   svg {
     color: $color-accent-gold;
@@ -207,7 +216,7 @@
     display: block;
     font-family: $font-heading;
     font-size: 1.05rem;
-    color: $text-main;
+    color: $color-primary;
     margin-bottom: 0.2rem;
   }
 

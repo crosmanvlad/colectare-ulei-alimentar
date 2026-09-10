@@ -6,8 +6,9 @@
 
 .banner {
   padding: 5rem 0 3rem 0;
-  background: linear-gradient(180deg, rgba(9, 51, 34, 0.6) 0%, rgba(4, 13, 10, 0.9) 100%);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  background: linear-gradient(90deg, #051e14 0%, #093826 50%, #051e14 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 10px 30px rgba(9, 56, 38, 0.2), 0 0 25px rgba(212, 175, 55, 0.15);
   text-align: center;
 
   .badge {
@@ -25,13 +26,13 @@
     font-family: $font-heading;
     font-size: 3rem;
     font-weight: 900;
-    color: $text-main;
+    color: #ffffff;
     margin-bottom: 0.75rem;
   }
 
   .subtitle {
     font-size: 1.1rem;
-    color: $text-muted;
+    color: rgba(255, 255, 255, 0.85);
     max-width: 620px;
     margin: 0 auto;
   }
@@ -42,9 +43,10 @@
 }
 
 .introCard {
-  background: rgba(9, 51, 34, 0.4);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: rgba(4, 24, 17, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.4);
   border-radius: $radius-lg;
+  box-shadow: 0 10px 30px rgba(9, 56, 38, 0.2), 0 0 20px rgba(212, 175, 55, 0.12);
   padding: 2.5rem;
   text-align: center;
   max-width: 900px;
@@ -60,7 +62,7 @@
 
   p {
     font-size: 1.05rem;
-    color: $text-muted;
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.65;
   }
 }
@@ -113,13 +115,13 @@
       font-family: $font-heading;
       font-size: 1.5rem;
       font-weight: 800;
-      color: $text-main;
+      color: $color-primary;
     }
   }
 
   .cardDesc {
     font-size: 1rem;
-    color: $text-muted;
+    color: $text-body;
     line-height: 1.65;
     margin-bottom: 1.75rem;
   }
@@ -136,7 +138,7 @@
       align-items: flex-start;
       gap: 0.6rem;
       font-size: 0.925rem;
-      color: $text-main;
+      color: $text-body;
 
       svg {
         color: $color-primary-light;
@@ -172,9 +174,10 @@
 }
 
 .ctaBox {
-  background: linear-gradient(135deg, #093322 0%, #154c33 100%);
+  background: linear-gradient(90deg, #051e14 0%, #093826 50%, #051e14 100%);
   border: 1px solid rgba(212, 175, 55, 0.4);
   border-radius: $radius-lg;
+  box-shadow: 0 10px 30px rgba(9, 56, 38, 0.2), 0 0 25px rgba(212, 175, 55, 0.15);
   padding: 3rem;
   display: flex;
   align-items: center;
@@ -191,12 +194,13 @@
       font-family: $font-heading;
       font-size: 1.75rem;
       font-weight: 800;
-      color: $color-accent-gold;
+      color: #c59b27;
       margin-bottom: 0.5rem;
     }
+
     p {
       font-size: 1.05rem;
-      color: $text-main;
+      color: rgba(255, 255, 255, 0.85);
     }
   }
 
@@ -204,7 +208,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    background: #04140e;
+    background: rgba(4, 24, 17, 0.95);
     color: #ffffff;
     font-family: $font-heading;
     font-weight: 800;
@@ -217,7 +221,7 @@
     @include transition-smooth;
 
     &:hover {
-      background: rgba(212, 175, 55, 0.2);
+      background: rgba(212, 175, 55, 0.25);
       color: $color-accent-gold;
     }
   }
@@ -244,16 +248,27 @@
 
 .benefitCard {
   padding: 1.25rem;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  @include transition-smooth;
+
+  &:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  }
 
   &.green {
-    background: rgba(14, 133, 87, 0.15);
-    border-color: rgba(52, 211, 153, 0.3);
+    background: #ffffff;
+    border-color: #e5e7eb;
+
+    &:hover {
+      border-color: rgba(212, 175, 55, 0.4);
+    }
   }
 
   svg {
@@ -262,7 +277,7 @@
   }
 
   strong {
-    color: #ffffff;
+    color: $color-primary;
     font-size: 1.1rem;
     display: block;
     margin-bottom: 0.25rem;
@@ -270,10 +285,9 @@
   }
 
   p {
-    color: $text-muted;
+    color: $text-body;
     font-size: 0.9rem;
     line-height: 1.5;
     margin: 0;
   }
 }
-

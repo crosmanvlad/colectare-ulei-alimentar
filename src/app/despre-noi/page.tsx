@@ -31,7 +31,7 @@ export default function DespreNoi() {
                   Pentru majoritatea, un deșeu. <br />
                   Pentru noi, <span className={styles.goldText}>aici începe procesul.</span>
                 </h2>
-                
+
                 <p className={styles.leadParagraph}>
                   Pentru majoritatea afacerilor HoReCa, uleiul alimentar uzat apare la finalul procesului. Pentru noi, acolo începe procesul.
                 </p>
@@ -64,15 +64,15 @@ export default function DespreNoi() {
                   Credem că modelul câștigător este cel în care toate părțile au de câștigat:
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0, marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#e5e7eb' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#c59b27' }}>
                     <CheckCircle2 size={18} style={{ color: '#d4af37', flexShrink: 0 }} />
                     <span>Clientul recuperează valoare dintr-o resursă pe care altfel ar considera-o deșeu.</span>
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#e5e7eb' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#c59b27' }}>
                     <CheckCircle2 size={18} style={{ color: '#d4af37', flexShrink: 0 }} />
                     <span>Uleiul este introdus într-un circuit de valorificare.</span>
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#e5e7eb' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#c59b27' }}>
                     <CheckCircle2 size={18} style={{ color: '#d4af37', flexShrink: 0 }} />
                     <span>Relația dintre noi devine un parteneriat economic sănătos, nu doar o tranzacție.</span>
                   </li>
@@ -85,7 +85,7 @@ export default function DespreNoi() {
                 <p className={styles.paragraph}>
                   Vrem ca numele <strong>TKM OIL GROUP</strong> să însemne un singur lucru pentru clienții noștri:
                 </p>
-                
+
                 <div className={styles.ambitionBadge}>
                   <Award size={32} />
                   <div>

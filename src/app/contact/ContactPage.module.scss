@@ -6,8 +6,9 @@
 
 .banner {
   padding: 5rem 0 3rem 0;
-  background: linear-gradient(180deg, rgba(9, 51, 34, 0.6) 0%, rgba(4, 13, 10, 0.9) 100%);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  background: linear-gradient(90deg, #051e14 0%, #093826 50%, #051e14 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 10px 30px rgba(9, 56, 38, 0.2), 0 0 25px rgba(212, 175, 55, 0.15);
   text-align: center;
 
   .badge {
@@ -25,13 +26,13 @@
     font-family: $font-heading;
     font-size: 3rem;
     font-weight: 900;
-    color: $text-main;
+    color: #ffffff;
     margin-bottom: 0.75rem;
   }
 
   .subtitle {
     font-size: 1.1rem;
-    color: $text-muted;
+    color: rgba(255, 255, 255, 0.85);
     max-width: 620px;
     margin: 0 auto;
   }
