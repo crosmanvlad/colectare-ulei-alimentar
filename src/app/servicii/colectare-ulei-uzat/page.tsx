@@ -32,7 +32,7 @@ export default function ColectareUleiUzatPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center', marginBottom: '4rem' }}>
+            <div className={styles.detailSplit}>
               <div>
                 <h3 style={{ fontFamily: 'Outfit', fontSize: '2rem', fontWeight: 800, color: '#093826', marginBottom: '1.25rem' }}>
                   Sistemul Câștigător: <span style={{ color: '#c59b27' }}>Primești Valoare Înapoi</span>
