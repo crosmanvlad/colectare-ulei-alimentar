@@ -26,7 +26,7 @@ export default function ServiciiOverview() {
             <div className={styles.introCard}>
               <h2>Sistem Simplu. Colectare Organizată. Condiții Transparente.</h2>
               <p>
-                Uleiul alimentar uzat trebuie depozitat, gestionat și predat. Dar asta nu înseamnă că trebuie să îți consume timpul. 
+                Uleiul alimentar uzat trebuie depozitat, gestionat și predat. Dar asta nu înseamnă că trebuie să îți consume timpul.
                 TKM OIL GROUP îți oferă un sistem simplu prin care uleiul uzat este colectat și valorificat în condiții stabilite de la început.
               </p>
             </div>
@@ -42,7 +42,7 @@ export default function ServiciiOverview() {
                 </div>
 
                 <p className={styles.cardDesc}>
-                  Ne ocupăm de ridicarea uleiului alimentar uzat generat de activitatea ta și stabilim frecvența colectării în funcție de necesarul real al locației. 
+                  Ne ocupăm de ridicarea uleiului alimentar uzat generat de activitatea ta și stabilim frecvența colectării în funcție de necesarul real al locației.
                   Transformăm uleiul uzat în ulei proaspăt de palmier/floarea-soarelui sau în contravaloarea în bani.
                 </p>
 
@@ -70,13 +70,12 @@ export default function ServiciiOverview() {
                 </div>
 
                 <p className={styles.cardDesc}>
-                  Pentru clienții de la care colectăm ulei alimentar uzat, oferim, contra cost, și serviciul de colectare a conținutului din separatoarele de grăsimi. 
+                  Pentru clienții de la care colectăm ulei alimentar uzat, oferim, contra cost, și serviciul de colectare a conținutului din separatoarele de grăsimi.
                   Un singur partener integrat — mai puține lucruri de administrat.
                 </p>
 
                 <ul className={styles.featureList}>
                   <li><CheckCircle2 size={18} /><span>Integrat în colaborarea existentă pentru reducerea numărului de furnizori</span></li>
-                  <li><CheckCircle2 size={18} /><span>Spălare sub presiune & vidanjare profesională a separatoarelor</span></li>
                   <li><CheckCircle2 size={18} /><span>Documentație tehnică conformă DSVSA & ISU</span></li>
                 </ul>
 

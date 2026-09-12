@@ -15,9 +15,6 @@ export default function SeparatoareGrasimiPage() {
           <div className="container">
             <span className={styles.badge}>Serviciu Integrat</span>
             <h1 className={styles.title}>Colectarea Separatoarelor de Grăsimi</h1>
-            <p className={styles.subtitle}>
-              Spălare sub presiune, vidanjare ecologică și mentenanță autorizată pentru bucătării profesionale.
-            </p>
           </div>
         </section>
 
@@ -26,7 +23,7 @@ export default function SeparatoareGrasimiPage() {
             <div className={styles.introCard}>
               <h2>Un singur partener. Mai puține lucruri de administrat.</h2>
               <p>
-                Pentru clienții de la care colectăm ulei alimentar uzat, oferim, contra cost, și serviciul de colectare a conținutului din separatoarele de grăsimi. 
+                Pentru clienții de la care colectăm ulei alimentar uzat, oferim, contra cost, și serviciul de colectare a conținutului din separatoarele de grăsimi.
                 Serviciul poate fi integrat în colaborarea existentă, astfel încât să reduci numărul furnizorilor cu care trebuie să lucrezi.
               </p>
             </div>
@@ -39,18 +36,10 @@ export default function SeparatoareGrasimiPage() {
 
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                   <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', background: '#ffffff', padding: '1.25rem', borderRadius: '12px', border: '1px solid #e5e7eb', boxShadow: '0 4px 15px rgba(0,0,0,0.04)' }}>
-                    <Wrench size={24} style={{ color: '#c59b27', flexShrink: 0, marginTop: '0.15rem' }} />
-                    <div>
-                      <strong style={{ color: '#093826', fontSize: '1.1rem', display: 'block', marginBottom: '0.2rem', fontFamily: 'Outfit' }}>Spălare & Vidanjare Profesională</strong>
-                      <div style={{ color: '#4b5563', fontSize: '0.9rem' }}>Echipamente de curățare sub presiune pentru eliminarea tuturor depunerilor și mirosurilor neplăcute.</div>
-                    </div>
-                  </li>
-
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', background: '#ffffff', padding: '1.25rem', borderRadius: '12px', border: '1px solid #e5e7eb', boxShadow: '0 4px 15px rgba(0,0,0,0.04)' }}>
                     <FileCheck size={24} style={{ color: '#c59b27', flexShrink: 0, marginTop: '0.15rem' }} />
                     <div>
                       <strong style={{ color: '#093826', fontSize: '1.1rem', display: 'block', marginBottom: '0.2rem', fontFamily: 'Outfit' }}>Documentație Tehnică Completă</strong>
-                      <div style={{ color: '#4b5563', fontSize: '0.9rem' }}>Proces-verbal de vidanjare și documente legale valabile pentru controalele DSVSA și ISU.</div>
+                      <div style={{ color: '#4b5563', fontSize: '0.9rem' }}>Proces-verbal și documente legale valabile pentru controalele DSVSA și ISU.</div>
                     </div>
                   </li>
 

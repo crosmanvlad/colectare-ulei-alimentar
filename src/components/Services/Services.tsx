@@ -9,7 +9,7 @@ export default function Services() {
       id: 'colectare',
       icon: <Droplets size={26} />,
       title: 'Colectare Ulei Uzat',
-      desc: 'Preluare profesională pentru restaurante, cantine și fast-food-uri. Furnizăm bidoane albe de stocare TKM OIL, butoaie 200L și IBC-uri 1000L.',
+      desc: 'Preluare profesională pentru restaurante, cantine și fast-food-uri. Furnizăm bidoane albe de stocare TKM OIL și IBC-uri 1000L.',
       features: [
         'Bidoane & Butoaie ermetice 100% gratuite',
         'Preluare în 24-48 ore de la solicitare',
@@ -42,7 +42,7 @@ export default function Services() {
       id: 'separatoare',
       icon: <ShieldAlert size={26} />,
       title: 'Separatoare de Grăsimi',
-      desc: 'Servicii autorizate de curățare, vidanjare și colectare a reziduurilor din separatoarele de grăsimi din bucătăriile profesionale.',
+      desc: 'Servicii autorizate de colectare a reziduurilor din separatoarele de grăsimi din bucătăriile profesionale.',
       features: [
         'Mentenanță preventivă și spălare sub presiune',
         'Documentație tehnică conformă DSVSA/ISU',

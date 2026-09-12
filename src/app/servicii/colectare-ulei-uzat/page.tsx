@@ -26,8 +26,8 @@ export default function ColectareUleiUzatPage() {
             <div className={styles.introCard}>
               <h2>Ne ocupăm de ridicarea uleiului alimentar uzat direct din bucătăria ta</h2>
               <p>
-                Stabilim frecvența colectării în funcție de necesarul real al locației tale. 
-                Fără să aștepți până când recipientele devin o problemă. Fără să transformi bucătăria într-un spațiu de depozitare. 
+                Stabilim frecvența colectării în funcție de necesarul real al locației tale.
+                Fără să aștepți până când recipientele devin o problemă. Fără să transformi bucătăria într-un spațiu de depozitare.
                 Fără să îți distragi echipa de la ceea ce produce valoare.
               </p>
             </div>
@@ -38,7 +38,7 @@ export default function ColectareUleiUzatPage() {
                   Sistemul Câștigător: <span style={{ color: '#c59b27' }}>Primești Valoare Înapoi</span>
                 </h3>
                 <p style={{ color: '#374151', fontSize: '1.05rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
-                  Una dintre diferențele importante ale modelului nostru este posibilitatea de a transforma uleiul uzat în produse pe care bucătăria ta le folosește din nou. 
+                  Una dintre diferențele importante ale modelului nostru este posibilitatea de a transforma uleiul uzat în produse pe care bucătăria ta le folosește din nou.
                   Este un circuit simplu: <strong>folosești → colectăm → valorificăm → primești valoare înapoi</strong>.
                 </p>
 

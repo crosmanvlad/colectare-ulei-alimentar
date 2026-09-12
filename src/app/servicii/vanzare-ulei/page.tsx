@@ -46,7 +46,7 @@ export default function VanzareUleiPage() {
                   <div className={styles.benefitCard}>
                     <Sun size={28} style={{ color: '#c59b27' }} />
                     <div>
-                      <strong style={{ color: '#093826' }}>Ulei de Floarea-Soarelui (Spornic / Surâsul Soarelui)</strong>
+                      <strong style={{ color: '#093826' }}>Ulei de Floarea-Soarelui</strong>
                       <p>100% rafinat, gust neutru, culoare aurie limpede. Ideal pentru gătit universal, sosuri și preparare la cald.</p>
                     </div>
                   </div>
@@ -54,8 +54,15 @@ export default function VanzareUleiPage() {
                   <div className={styles.benefitCard}>
                     <Flame size={28} style={{ color: '#c59b27' }} />
                     <div>
-                      <strong style={{ color: '#093826' }}>Ulei de Palmier Fracționat (Mr. Chef)</strong>
+                      <strong style={{ color: '#093826' }}>Ulei de Palmier Fracționat</strong>
                       <p>Special formulat pentru friteuze profesionale. Rezistență termică până la 220°C, zero mirosuri și randament maxim per porție.</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.benefitCard}>
+                    <Sun size={28} style={{ color: '#c59b27' }} />
+                    <div>
+                      <strong style={{ color: '#093826' }}>Mix de Uleiuri de Floarea Soarelui și Rapiță</strong>
                     </div>
                   </div>
 
