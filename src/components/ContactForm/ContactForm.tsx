@@ -83,7 +83,7 @@ export default function ContactForm() {
                 </div>
                 <div className={styles.cardText}>
                   <label>Dispecerat Preluări Directe</label>
-                  <strong>0746 405 269</strong>
+                  <strong>0748 058 141</strong>
                 </div>
               </div>
 
@@ -180,7 +180,7 @@ export default function ContactForm() {
                       type="tel"
                       name="phone"
                       required
-                      placeholder="0746 405 269"
+                      placeholder="0748 058 141"
                       value={formData.phone}
                       onChange={handleChange}
                     />

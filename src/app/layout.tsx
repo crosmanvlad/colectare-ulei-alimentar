@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'TKM OIL GROUP SRL | Colectare Ulei Uzat Alimentar & Separatoare Grăsimi',
-  description: 'TKM OIL GROUP SRL - „Ulei uzat, resurse pentru viitor”. Colectare autorizată ANPM de ulei uzat alimentar și grăsimi pentru restaurante, HORECA și persoane fizice. Recipienti gratuiți, certificat mediu pe loc și plată pe loc. Telefon: 0746 405 269.',
+  description: 'TKM OIL GROUP SRL - „Ulei uzat, resurse pentru viitor”. Colectare autorizată ANPM de ulei uzat alimentar și grăsimi pentru restaurante, HORECA și persoane fizice. Recipienti gratuiți, certificat mediu pe loc și plată pe loc. Telefon: 0748 058 141.',
   keywords: [
     'TKM OIL GROUP SRL',
     'ulei uzat resurse pentru viitor',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'schimb si valorificare recipienti',
     'www.colectareuleialimentar.ro',
     'office@tkm-oil.ro',
-    '0746405269'
+    '0748058141'
   ],
   authors: [{ name: 'TKM OIL GROUP SRL' }],
   creator: 'TKM OIL GROUP SRL',
@@ -79,7 +79,7 @@ export default function RootLayout({
     image: 'https://www.colectareuleialimentar.ro/images/tkm/hero-tkm.png',
     '@id': 'https://www.colectareuleialimentar.ro',
     url: 'https://www.colectareuleialimentar.ro',
-    telephone: '+40746405269',
+    telephone: '+40748058141',
     email: 'office@tkm-oil.ro',
     priceRange: 'Gratuit / Bonificație pe Loc',
     address: {

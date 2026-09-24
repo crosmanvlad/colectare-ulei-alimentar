@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './FloatingWhatsApp.module.scss';
 
 export default function FloatingWhatsApp() {
-  const phoneNumber = '40746405269';
+  const phoneNumber = '40748058141';
   const defaultMessage = encodeURIComponent('Bună ziua! Doresc mai multe informații despre colectarea și distribuția de ulei TKM OIL GROUP.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${defaultMessage}`;
 
@@ -12,7 +12,7 @@ export default function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       className={styles.whatsappBtn}
-      aria-label="Contactează-ne pe WhatsApp la 0746405269"
+      aria-label="Contactează-ne pe WhatsApp la 0748 058 141"
       id="floating-whatsapp-btn"
     >
       <span className={styles.tooltip}>Discută pe WhatsApp</span>

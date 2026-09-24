@@ -216,7 +216,7 @@ export function generateClientConfirmationHtml(data: ContactData): string {
         <h3>Aveți o urgență operațională?</h3>
         <p>Ne puteți apela direct la dispecerat:</p>
         <p style="font-size: 18px; margin-top: 8px;">
-          📞 <a href="tel:0746405269">0746 405 269</a>
+          📞 <a href="tel:0748058141">0748 058 141</a>
         </p>
         <p style="font-size: 12px; color: rgba(255, 255, 255, 0.7); margin-top: 6px;">
           Email: <a href="mailto:office@tkm-oil.ro">office@tkm-oil.ro</a> • Luni - Vineri: 08:00 - 18:00

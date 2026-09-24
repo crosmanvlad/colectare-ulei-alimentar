@@ -173,9 +173,9 @@ export default function Navbar() {
 
               {/* Mobile Drawer Call-To-Action Box */}
               <li className={styles.mobileDrawerFooter}>
-                <a href="tel:0746405269" className={styles.mobileCallBtn}>
+                <a href="tel:0748058141" className={styles.mobileCallBtn}>
                   <Phone size={18} />
-                  <span>Suni Direct: 0746 405 269</span>
+                  <span>Suni Direct: 0748 058 141</span>
                 </a>
                 <a href="mailto:office@tkm-oil.ro" className={styles.mobileEmailBtn}>
                   <Mail size={16} />
@@ -196,8 +196,8 @@ export default function Navbar() {
                 <Phone size={18} />
               </div>
               <div className={styles.contactDetails}>
-                <a href="tel:0746405269" className={styles.phoneBtn} id="nav-phone-call">
-                  0746405269
+                <a href="tel:0748058141" className={styles.phoneBtn} id="nav-phone-call">
+                  0748 058 141
                 </a>
                 <a href="mailto:office@tkm-oil.ro" className={styles.emailSub}>
                   office@tkm-oil.ro

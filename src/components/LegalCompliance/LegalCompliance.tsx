@@ -20,7 +20,7 @@ export default function LegalCompliance() {
               </h2>
 
               <p className={styles.description}>
-                Garda Națională de Mediu și ANPC efectuează controale riguroase privind trasabilitatea uleiurilor uzate. 
+                Garda Națională de Mediu și ANPC efectuează controale riguroase privind trasabilitatea uleiurilor uzate.
                 Deversarea uleiului alimentar la canalizare constituie contravenție gravă și se sancționează cu amenzi de la 20.000 la 40.000 LEI.
               </p>
 
@@ -31,7 +31,7 @@ export default function LegalCompliance() {
                   </div>
                   <div className={styles.info}>
                     <h4>Certificat Oficial de Reciclare ANPM</h4>
-                    <p>Eliberăm pe loc documentele legale (Anexa 3 / Anexa 2) obligatorii la controalele de mediu.</p>
+                    <p>Eliberăm pe loc documentele legale (Anexa 3) obligatorii la controalele de mediu.</p>
                   </div>
                 </div>
 

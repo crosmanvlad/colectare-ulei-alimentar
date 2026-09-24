@@ -73,7 +73,7 @@ export default function TrustGallery() {
             />
             <div className={styles.cardMeta}>
               <h4>Dispecerat & Asistență Dedicată</h4>
-              <p>Echipă operativă gata să răspundă solicitărilor la 0746 405 269 și office@tkm-oil.ro.</p>
+              <p>Echipă operativă gata să răspundă solicitărilor la 0748 058 141 și office@tkm-oil.ro.</p>
             </div>
           </div>
         </div>

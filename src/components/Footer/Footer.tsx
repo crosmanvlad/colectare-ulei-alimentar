@@ -45,9 +45,9 @@ export default function Footer() {
             <h4>Contact Direct</h4>
             <ul>
               <li>
-                <a href="tel:0746405269" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#d4af37', fontWeight: 700 }}>
+                <a href="tel:0748058141" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#d4af37', fontWeight: 700 }}>
                   <Phone size={14} />
-                  <span>0746 405 269</span>
+                  <span>0748 058 141</span>
                 </a>
               </li>
               <li>
