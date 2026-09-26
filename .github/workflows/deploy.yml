@@ -109,11 +109,16 @@ jobs:
             # Pull latest image
             docker pull $DOCKER_IMAGE
 
-            # Check if docker-compose.yml exists, if not request git pull or recreate
+            # Check if docker-compose.yml exists and start containers
             if [ -f "docker-compose.yml" ]; then
-              docker-compose up -d --remove-orphans
+              if docker compose version >/dev/null 2>&1; then
+                docker compose up -d --remove-orphans
+              else
+                docker-compose up -d --remove-orphans
+              fi
             else
-              echo "docker-compose.yml not found in $APP_DIR. Ensure repo is cloned on droplet."
+              echo "docker-compose.yml not found in $APP_DIR."
+              exit 1
             fi
 
             # Clean up old unused images to save disk space
