@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FileCheck2, ShieldCheck, MapPin, Download, CheckCircle2, ArrowRight } from 'lucide-react';
+import { FileCheck2, ShieldCheck, Download, CheckCircle2, ArrowRight } from 'lucide-react';
 import styles from './Autorizatii.module.scss';
 
 export default function AutorizatiiPage() {

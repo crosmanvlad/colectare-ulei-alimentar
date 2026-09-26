@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShieldAlert, CheckCircle2, ArrowRight, Wrench, FileCheck, Layers } from 'lucide-react';
+import { ArrowRight, FileCheck, Layers } from 'lucide-react';
 import styles from '../Servicii.module.scss';
 
 export default function SeparatoareGrasimiPage() {

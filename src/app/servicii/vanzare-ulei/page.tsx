@@ -2,8 +2,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Sun, Flame, Sparkles, Truck, RefreshCw, BadgePercent, ArrowRight } from 'lucide-react';
+import { Sun, Flame, Sparkles, Truck, RefreshCw, BadgePercent } from 'lucide-react';
 import styles from '../Servicii.module.scss';
 import VanzareContactForm from '@/components/VanzareContactForm/VanzareContactForm';
 

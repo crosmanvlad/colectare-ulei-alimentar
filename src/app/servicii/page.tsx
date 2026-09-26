@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Droplets, ShieldAlert, ArrowRight, CheckCircle2, Sun } from 'lucide-react';
 import styles from './Servicii.module.scss';

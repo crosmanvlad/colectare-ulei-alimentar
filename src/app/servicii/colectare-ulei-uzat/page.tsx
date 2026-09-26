@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Droplets, CheckCircle2, ArrowRight, Sun, Flame, Banknote } from 'lucide-react';
+import { ArrowRight, Sun, Flame, Banknote } from 'lucide-react';
 import styles from '../Servicii.module.scss';
 
 export default function ColectareUleiUzatPage() {

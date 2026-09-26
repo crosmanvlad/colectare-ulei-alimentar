@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { UtensilsCrossed, Hotel, ChefHat, Flame, Sun, Banknote, ArrowRight, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { UtensilsCrossed, Hotel, ChefHat, Flame, Sun, Banknote, ArrowRight, ShieldCheck } from 'lucide-react';
 import styles from './PentruHoreca.module.scss';
 
 export default function PentruHorecaPage() {
