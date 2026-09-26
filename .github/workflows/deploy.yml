@@ -125,10 +125,13 @@ jobs:
 
             # Check if docker-compose.yml exists and start containers
             if [ -f "docker-compose.yml" ]; then
+              # Cleanly remove any stuck or conflicting containers before starting
+              docker rm -f colectare_ulei_app colectare_ulei_nginx 2>/dev/null || true
+
               if docker compose version >/dev/null 2>&1; then
-                docker compose up -d --remove-orphans
+                docker compose up -d --remove-orphans --force-recreate
               else
-                docker-compose up -d --remove-orphans
+                docker-compose up -d --remove-orphans --force-recreate
               fi
             else
               echo "docker-compose.yml not found in $APP_DIR."
