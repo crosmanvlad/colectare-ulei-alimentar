@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
@@ -6,9 +7,52 @@ import Link from 'next/link';
 import { ArrowRight, FileCheck, Layers } from 'lucide-react';
 import styles from '../Servicii.module.scss';
 
+export const metadata: Metadata = {
+  title: 'Curățare & Colectare Separatoare de Grăsimi București & Ilfov',
+  description: 'Serviciu autorizat de curățare, vidanjare și colectare ecologică pentru separatoarele de grăsimi din restaurante, cantine și laboratoare alimentare. Documentație legală completă pe loc.',
+  keywords: [
+    'curatare separatoare grasimi bucuresti',
+    'colectare separatoare grasimi',
+    'vidanjare separator grasimi restaurant',
+    'mentenanta separator grasimi horeca',
+    'deseuri separatoare grasimi ilfov'
+  ],
+  alternates: {
+    canonical: '/servicii/separatoare-grasimi',
+  },
+  openGraph: {
+    title: 'Curățare & Colectare Separatoare de Grăsimi | TKM OIL GROUP',
+    description: 'Serviciu integrat de mentenanță și evacuare a separatoarelor de grăsimi pentru unitățile de alimentație publică.',
+    url: 'https://www.colectareuleialimentar.ro/servicii/separatoare-grasimi',
+  },
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Curățare și Colectare Separatoare de Grăsimi',
+  serviceType: 'Grease Trap Cleaning & Waste Disposal',
+  provider: {
+    '@type': 'RecyclingCenter',
+    name: 'TKM OIL GROUP SRL',
+    telephone: '+40748058141',
+    url: 'https://www.colectareuleialimentar.ro',
+  },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'București' },
+    { '@type': 'AdministrativeArea', name: 'Ilfov' },
+    { '@type': 'Country', name: 'România' },
+  ],
+  description: 'Vidanjare, evacuare și neutralizare ecologică a conținutului separatoarelor de grăsimi pentru restaurante, cantine și producători alimentari.',
+};
+
 export default function SeparatoareGrasimiPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
       <main className={styles.main}>
         <section className={styles.banner}>

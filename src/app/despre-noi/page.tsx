@@ -1,10 +1,31 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ShieldCheck, HeartHandshake, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from './DespreNoi.module.scss';
+
+export const metadata: Metadata = {
+  title: 'Despre TKM OIL GROUP | Lider în Colectarea și Reciclarea Uleiului Uzat',
+  description: 'Află mai multe despre misiunea TKM OIL GROUP SRL: un sistem transparent și eficient de colectare a uleiului alimentar uzat și transformare în resurse sustenabile pentru viitor.',
+  keywords: [
+    'despre tkm oil group',
+    'tkm oil group srl bucuresti',
+    'companie colectare ulei romania',
+    'reciclare ulei vegetal biodiesel',
+    'misiune ecologica colectare ulei'
+  ],
+  alternates: {
+    canonical: '/despre-noi',
+  },
+  openGraph: {
+    title: 'Despre TKM OIL GROUP | Ulei uzat, resurse pentru viitor',
+    description: 'Povestea, valorile și misiunea TKM OIL GROUP SRL în reciclarea ecologică a uleiurilor alimentare.',
+    url: 'https://www.colectareuleialimentar.ro/despre-noi',
+  },
+};
 
 export default function DespreNoi() {
   return (

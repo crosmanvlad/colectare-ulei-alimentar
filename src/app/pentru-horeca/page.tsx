@@ -1,10 +1,56 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { UtensilsCrossed, Hotel, ChefHat, Flame, Sun, Banknote, ArrowRight, ShieldCheck } from 'lucide-react';
 import styles from './PentruHoreca.module.scss';
+
+export const metadata: Metadata = {
+  title: 'Parteneriat Colectare Ulei Uzat HoReCa | Restaurante, Cantine & Hoteluri',
+  description: 'Soluții complete de gestionare a uleiului uzat pentru restaurante, unități de catering, patiserii și hoteluri. Ridicări adaptate ritmului tău, recipienți speciali gratuiți, Anexa 3 pe loc și plată directă.',
+  keywords: [
+    'colectare ulei horeca',
+    'colectare ulei restaurante bucuresti',
+    'contract colectare ulei cantine',
+    'colectare ulei hoteluri',
+    'reciclare ulei fast food',
+    'anexa 3 deseuri restaurante',
+    'schimb ulei restaurante'
+  ],
+  alternates: {
+    canonical: '/pentru-horeca',
+  },
+  openGraph: {
+    title: 'Soluții Colectare Ulei Uzat Pentru HoReCa | TKM OIL GROUP',
+    description: 'Transformă deșeurile de gătit într-o sursă constantă de valoare. Parteneriat autorizat ANPM pentru unități HoReCa.',
+    url: 'https://www.colectareuleialimentar.ro/pentru-horeca',
+  },
+};
+
+const horecaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Servicii Colectare Ulei Uzat pentru HoReCa',
+  serviceType: 'Commercial Waste Collection',
+  provider: {
+    '@type': 'RecyclingCenter',
+    name: 'TKM OIL GROUP SRL',
+    telephone: '+40748058141',
+    url: 'https://www.colectareuleialimentar.ro',
+  },
+  audience: {
+    '@type': 'BusinessAudience',
+    audienceType: 'Restaurante, Hoteluri, Cantine, Fast-Food-uri, Catering',
+  },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'București' },
+    { '@type': 'AdministrativeArea', name: 'Ilfov' },
+    { '@type': 'Country', name: 'România' },
+  ],
+  description: 'Program complet de colectare autorizată ANPM a uleiurilor vegetale uzate pentru unitățile de alimentație publică, cu eliberare formulare Anexa 3 și bonificație avantajoasă.',
+};
 
 export default function PentruHorecaPage() {
   const clients = [
@@ -16,6 +62,10 @@ export default function PentruHorecaPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(horecaSchema) }}
+      />
       <Navbar />
       <main className={styles.main}>
         <section className={styles.banner}>

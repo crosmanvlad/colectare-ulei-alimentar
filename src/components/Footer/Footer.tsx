@@ -35,6 +35,7 @@ export default function Footer() {
             <h4>Servicii TKM</h4>
             <ul>
               <li><Link href="/servicii/colectare-ulei-uzat">Colectare Ulei Uzat HORECA</Link></li>
+              <li><Link href="/pentru-horeca">Soluții HoReCa & Restaurante</Link></li>
               <li><Link href="/servicii/vanzare-ulei">Vânzare & Distribuție Ulei</Link></li>
               <li><Link href="/servicii/separatoare-grasimi">Colectare Separatoare de Grăsimi</Link></li>
               <li><Link href="/autorizatii">Certificat Oficial ANPM</Link></li>
@@ -80,8 +81,8 @@ export default function Footer() {
             © {new Date().getFullYear()} TKM OIL GROUP SRL. Toate drepturile rezervate. Ulei uzat, resurse pentru viitor.
           </div>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <a href="#contact" style={{ textDecoration: 'underline' }}>Termeni și Condiții</a>
-            <a href="#contact" style={{ textDecoration: 'underline' }}>Politica de Confidențialitate</a>
+            <Link href="/contact" style={{ textDecoration: 'underline' }}>Termeni și Condiții</Link>
+            <Link href="/contact" style={{ textDecoration: 'underline' }}>Politica de Confidențialitate</Link>
             <a href="https://anpc.ro/" target="_blank" rel="noopener noreferrer">ANPC</a>
           </div>
         </div>

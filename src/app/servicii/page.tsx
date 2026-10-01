@@ -1,13 +1,69 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Link from 'next/link';
 import { Droplets, ShieldAlert, ArrowRight, CheckCircle2, Sun } from 'lucide-react';
 import styles from './Servicii.module.scss';
 
+export const metadata: Metadata = {
+  title: 'Servicii Colectare Ulei Uzat & Separatoare Grăsimi',
+  description: 'Gama completă de servicii TKM OIL GROUP: colectare autorizată ANPM ulei alimentar uzat, igienizare separatoare de grăsimi și distribuție ulei proaspăt de palmier și floarea-soarelui.',
+  keywords: [
+    'servicii colectare ulei',
+    'colectare ulei alimentar uzat bucuresti',
+    'curatare separatoare grasimi',
+    'furnizor ulei alimentar',
+    'recipiente gratuite ulei',
+    'anexa 3 deseurilor'
+  ],
+  alternates: {
+    canonical: '/servicii',
+  },
+  openGraph: {
+    title: 'Servicii Colectare Ulei Uzat & Separatoare Grăsimi | TKM OIL GROUP',
+    description: 'Servicii complete de colectare și valorificare ecologică a uleiurilor uzate pentru HoReCa și companii. Recipiente gratuite și plată pe loc.',
+    url: 'https://www.colectareuleialimentar.ro/servicii',
+  },
+};
+
+const servicesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Servicii TKM OIL GROUP',
+  description: 'Servicii de colectare a uleiului alimentar uzat, mentenanță separatoare de grăsimi și aprovizionare HoReCa.',
+  itemListElement: [
+    {
+      '@type': 'Service',
+      position: 1,
+      name: 'Colectarea Uleiului Alimentar Uzat',
+      url: 'https://www.colectareuleialimentar.ro/servicii/colectare-ulei-uzat',
+      description: 'Preluare periodică sau la cerere a uleiului de gătit uzat, recipienți ermetici gratuiți, emitere Anexa 3 și plată/schimb pe loc.',
+    },
+    {
+      '@type': 'Service',
+      position: 2,
+      name: 'Colectarea Separatoarelor de Grăsimi',
+      url: 'https://www.colectareuleialimentar.ro/servicii/separatoare-grasimi',
+      description: 'Vidanjare și curățare specializată a separatoarelor de grăsimi pentru restaurante, cantine și laboratoare alimentare.',
+    },
+    {
+      '@type': 'Service',
+      position: 3,
+      name: 'Vânzare și Distribuție Ulei Alimentar',
+      url: 'https://www.colectareuleialimentar.ro/servicii/vanzare-ulei',
+      description: 'Furnizare ulei proaspăt de floarea-soarelui și palmier fracționat cu opțiune de compensare directă cu uleiul uzat predat.',
+    },
+  ],
+};
+
 export default function ServiciiOverview() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       <Navbar />
       <main className={styles.main}>
         <section className={styles.banner}>

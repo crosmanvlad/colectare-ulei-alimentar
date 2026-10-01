@@ -1,10 +1,31 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FileCheck2, ShieldCheck, Download, CheckCircle2, ArrowRight } from 'lucide-react';
 import styles from './Autorizatii.module.scss';
+
+export const metadata: Metadata = {
+  title: 'Autorizații Mediu ANPM & Conformitate Legală Anexa 3',
+  description: 'TKM OIL GROUP deține autorizație de mediu ANPM valabilă la nivel național pentru colectarea și transportul uleiurilor alimentare uzate. Eliberare instantă a formularului Anexa 3 pentru controale Garda de Mediu și DSV.',
+  keywords: [
+    'autorizatie mediu ANPM ulei uzat',
+    'anexa 3 deseurilor',
+    'trasabilitate deseuri ulei',
+    'conformitate garda de mediu horeca',
+    'certificat reciclare ulei uzat'
+  ],
+  alternates: {
+    canonical: '/autorizatii',
+  },
+  openGraph: {
+    title: 'Autorizații Mediu ANPM & Conformitate Legală | TKM OIL GROUP',
+    description: 'Documentație 100% legală: autorizații ANPM, trasabilitate și formulare Anexa 3 eliberate pe loc pentru liniștea afacerii tale.',
+    url: 'https://www.colectareuleialimentar.ro/autorizatii',
+  },
+};
 
 export default function AutorizatiiPage() {
   const docs = [

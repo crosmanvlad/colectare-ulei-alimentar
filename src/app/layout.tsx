@@ -9,21 +9,32 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'TKM OIL GROUP SRL | Colectare Ulei Uzat Alimentar & Separatoare Grăsimi',
-  description: 'TKM OIL GROUP SRL - „Ulei uzat, resurse pentru viitor”. Colectare autorizată ANPM de ulei uzat alimentar și grăsimi pentru restaurante, HORECA și persoane fizice. Recipienti gratuiți, certificat mediu pe loc și plată pe loc. Telefon: 0748 058 141.',
+  title: {
+    default: 'TKM OIL GROUP | Colectare Ulei Uzat Alimentar & Separatoare Grăsimi',
+    template: '%s | TKM OIL GROUP',
+  },
+  description: 'TKM OIL GROUP SRL - „Ulei uzat, resurse pentru viitor”. Serviciu autorizat ANPM de colectare gratuită ulei uzat alimentar, golire separatoare grăsimi și distribuție ulei proaspăt pentru restaurante, HoReCa și persoane fizice. Recipiente gratuite, Anexa 3 pe loc și plată directă. Dispecerat: 0748 058 141.',
   keywords: [
     'TKM OIL GROUP SRL',
-    'ulei uzat resurse pentru viitor',
     'colectare ulei uzat',
     'colectare ulei alimentar',
+    'colectare ulei alimentar uzat bucuresti',
+    'colectare ulei uzat ilfov',
     'colectare separatoare grasimi',
+    'curatare separatoare grasimi bucuresti',
+    'ulei uzat restaurante horeca',
+    'recipiente gratuite ulei uzat',
+    'anexa 3 deseurilor nepericuloase',
+    'autorizatie mediu ANPM colectare ulei',
     'plata pe loc ulei uzat',
-    'schimb si valorificare recipienti',
-    'www.colectareuleialimentar.ro',
-    'office@tkm-oil.ro',
-    '0748058141'
+    'schimb ulei uzat cu ulei proaspat',
+    'furnizor ulei floarea soarelui horeca',
+    'furnizor ulei palmier bucatarii profesionale',
+    'reciclare ulei prajit bucuresti',
+    '0748058141',
+    'colectareuleialimentar.ro'
   ],
-  authors: [{ name: 'TKM OIL GROUP SRL' }],
+  authors: [{ name: 'TKM OIL GROUP SRL', url: 'https://www.colectareuleialimentar.ro' }],
   creator: 'TKM OIL GROUP SRL',
   publisher: 'TKM OIL GROUP SRL',
   metadataBase: new URL('https://www.colectareuleialimentar.ro'),
@@ -31,8 +42,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'TKM OIL GROUP SRL | Colectare Ulei Uzat Alimentar & Separatoare Grăsimi',
-    description: 'TKM OIL GROUP SRL - Ulei uzat, resurse pentru viitor. Colectare autorizată ANPM, recipienți gratuiți, eliberare certificat mediu și plată pe loc.',
+    title: 'TKM OIL GROUP | Colectare Ulei Uzat Alimentar & Separatoare Grăsimi',
+    description: 'Colectare autorizată ANPM de ulei alimentar uzat și separatoare de grăsimi pentru restaurante, cantine și unități HoReCa. Recipienți gratuiți, Anexa 3 pe loc și plată pe loc.',
     url: 'https://www.colectareuleialimentar.ro',
     siteName: 'TKM OIL GROUP SRL',
     images: [
@@ -40,7 +51,7 @@ export const metadata: Metadata = {
         url: '/images/tkm/hero-tkm.png',
         width: 1200,
         height: 675,
-        alt: 'TKM OIL GROUP SRL Colectare si Reciclare Ulei Uzat',
+        alt: 'TKM OIL GROUP SRL - Colectare și Reciclare Ulei Uzat Alimentar',
       },
     ],
     locale: 'ro_RO',
@@ -48,8 +59,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TKM OIL GROUP SRL | Colectare Ulei Uzat Alimentar',
-    description: 'Colectare autorizată ANPM ulei uzat alimentar și separatoare de grăsimi pentru HORECA & Persoane Fizice.',
+    title: 'TKM OIL GROUP | Colectare Ulei Uzat Alimentar & Separatoare Grăsimi',
+    description: 'Colectare autorizată ANPM ulei uzat alimentar și separatoare de grăsimi pentru HoReCa & Persoane Fizice. Recipiente gratuite și plată pe loc.',
     images: ['/images/tkm/hero-tkm.png'],
   },
   robots: {
@@ -83,10 +94,10 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'RecyclingCenter',
     name: 'TKM OIL GROUP SRL',
-    alternateName: 'Colectare Ulei Alimentar Uzat',
+    alternateName: ['TKM Oil', 'Colectare Ulei Alimentar Uzat', 'TKM OIL GROUP'],
     slogan: 'Ulei uzat, resurse pentru viitor',
     image: 'https://www.colectareuleialimentar.ro/images/tkm/hero-tkm.png',
-    '@id': 'https://www.colectareuleialimentar.ro',
+    '@id': 'https://www.colectareuleialimentar.ro/#organization',
     url: 'https://www.colectareuleialimentar.ro',
     telephone: '+40748058141',
     email: 'office@tkm-oil.ro',
@@ -94,6 +105,7 @@ export default function RootLayout({
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'București',
+      addressRegion: 'București / Ilfov',
       addressCountry: 'RO',
     },
     geo: {
@@ -101,14 +113,50 @@ export default function RootLayout({
       latitude: 44.4323,
       longitude: 26.1063,
     },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '08:00',
-      closes: '18:00',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '08:00',
+        closes: '18:00',
+      },
+    ],
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'București' },
+      { '@type': 'AdministrativeArea', name: 'Ilfov' },
+      { '@type': 'Country', name: 'România' },
+    ],
+    description: 'Serviciu național autorizat de TKM OIL GROUP SRL pentru colectarea ecologică a uleiurilor uzate vegetale, curățarea separatoarelor de grăsimi și furnizarea de ulei proaspăt pentru bucătării HoReCa.',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Servicii Principale TKM OIL GROUP',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Colectare Ulei Alimentar Uzat',
+            description: 'Preluare autorizată ANPM direct de la locație, recipienți ermetici gratuiți, emitere Anexa 3 pe loc și plată sau compensare cu ulei proaspăt.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Curățare și Colectare Separatoare de Grăsimi',
+            description: 'Vidanjare, curățare și transport ecologic pentru conținutul separatoarelor de grăsimi ale restaurantelor și unităților alimentare.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Vânzare și Distribuție Ulei Alimentar Profesional',
+            description: 'Distribuție de ulei de floarea-soarelui și palmier fracționat pentru bucătării profesionale, cu opțiune de schimb cu uleiul uzat.',
+          },
+        },
+      ],
     },
-    areaServed: 'RO',
-    description: 'Serviciu național autorizat de TKM OIL GROUP SRL pentru colectarea, transportul și reciclarea ecologică a uleiurilor uzate vegetale și curățarea separatoarelor de grăsimi.',
   };
 
   return (

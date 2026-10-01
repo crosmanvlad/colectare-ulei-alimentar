@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
@@ -6,9 +7,52 @@ import { Sun, Flame, Sparkles, Truck, RefreshCw, BadgePercent } from 'lucide-rea
 import styles from '../Servicii.module.scss';
 import VanzareContactForm from '@/components/VanzareContactForm/VanzareContactForm';
 
+export const metadata: Metadata = {
+  title: 'Vânzare & Distribuție Ulei Alimentar HoReCa | Palmier & Floarea-Soarelui',
+  description: 'Furnizor direct de ulei alimentar proaspăt (floarea-soarelui și palmier fracționat) pentru restaurante, catering și bucătării profesionale. Posibilitate avantajoasă de compensare direct din uleiul uzat colectat.',
+  keywords: [
+    'furnizor ulei alimentar restaurante',
+    'distributie ulei floarea soarelui horeca',
+    'ulei palmier bucatarii profesionale',
+    'schimb ulei uzat cu ulei proaspat',
+    'aprovizionare ulei restaurante bucuresti'
+  ],
+  alternates: {
+    canonical: '/servicii/vanzare-ulei',
+  },
+  openGraph: {
+    title: 'Vânzare & Distribuție Ulei Alimentar Profesional | TKM OIL GROUP',
+    description: 'Distribuție de uleiuri vegetale superioare pentru HoReCa, cu livrare directă și schemă avantajoasă de compensare.',
+    url: 'https://www.colectareuleialimentar.ro/servicii/vanzare-ulei',
+  },
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Vânzare și Distribuție Ulei Alimentar Profesional',
+  serviceType: 'Food & Beverage Supply',
+  provider: {
+    '@type': 'Organization',
+    name: 'TKM OIL GROUP SRL',
+    telephone: '+40748058141',
+    url: 'https://www.colectareuleialimentar.ro',
+  },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'București' },
+    { '@type': 'AdministrativeArea', name: 'Ilfov' },
+    { '@type': 'Country', name: 'România' },
+  ],
+  description: 'Aprovizionare cu ulei proaspăt de floarea-soarelui și palmier fracționat special pentru prăjire intensă în bucătării profesionale.',
+};
+
 export default function VanzareUleiPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
       <main className={styles.main}>
         {/* Banner */}

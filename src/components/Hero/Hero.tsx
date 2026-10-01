@@ -30,7 +30,7 @@ export default function Hero() {
             </div>
 
             <p className={styles.description}>
-              Colectăm responsabil uleiul alimentar uzat și îl transformăm în resurse pentru un viitor mai curat.
+              Colectăm autorizat ANPM ulei alimentar uzat și separatoare de grăsimi pentru restaurante, HoReCa și companii. Recipiente ermetice gratuite, formular Anexa 3 pe loc și plată directă.
             </p>
 
             <div className={styles.featuresRow}>
@@ -69,10 +69,10 @@ export default function Hero() {
                 <span>SOLICITĂ COLECTARE</span>
               </Link>
 
-              <a href="#servicii" className={styles.secondaryCta} id="hero-secondary-cta">
+              <Link href="/servicii" className={styles.secondaryCta} id="hero-secondary-cta">
                 <LayoutGrid size={18} />
                 <span>VEZI SERVICIILE</span>
-              </a>
+              </Link>
             </div>
           </div>
 

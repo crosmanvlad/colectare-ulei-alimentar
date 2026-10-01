@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
@@ -6,9 +7,62 @@ import Link from 'next/link';
 import { ArrowRight, Sun, Flame, Banknote } from 'lucide-react';
 import styles from '../Servicii.module.scss';
 
+export const metadata: Metadata = {
+  title: 'Colectare Ulei Uzat Alimentar București & Ilfov | Recipiente Gratuite & Plată',
+  description: 'Serviciu autorizat ANPM de colectare ulei alimentar uzat pentru restaurante, cantine și HoReCa în București și Ilfov. Recipiente ermetice gratuite, formular Anexa 3 pe loc și bonificație prin plată sau ulei proaspăt. Dispecerat: 0748 058 141.',
+  keywords: [
+    'colectare ulei uzat bucuresti',
+    'colectare ulei alimentar uzat',
+    'colectare ulei restaurante',
+    'colectare ulei horeca',
+    'reciclare ulei prajit bucuresti',
+    'plata pe loc ulei uzat',
+    'schimb ulei uzat cu ulei nou',
+    'recipiente ulei uzat gratuite',
+    'anexa 3 deseuri nepericuloase'
+  ],
+  alternates: {
+    canonical: '/servicii/colectare-ulei-uzat',
+  },
+  openGraph: {
+    title: 'Colectare Ulei Uzat Alimentar | TKM OIL GROUP',
+    description: 'Colectare autorizată ANPM ulei vegetal uzat direct din bucătăria ta. Recipienți curați gratuiți, trasabilitate completă și plată pe loc.',
+    url: 'https://www.colectareuleialimentar.ro/servicii/colectare-ulei-uzat',
+  },
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Colectare Ulei Alimentar Uzat',
+  serviceType: 'Waste Collection & Recycling',
+  provider: {
+    '@type': 'RecyclingCenter',
+    name: 'TKM OIL GROUP SRL',
+    telephone: '+40748058141',
+    url: 'https://www.colectareuleialimentar.ro',
+  },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'București' },
+    { '@type': 'AdministrativeArea', name: 'Ilfov' },
+    { '@type': 'Country', name: 'România' },
+  ],
+  description: 'Preluare periodică direct de la locație a uleiului vegetal uzat, furnizare recipienți ermetici gratuiți, emitere Anexa 3 pe loc și plată sau schimb cu ulei proaspăt.',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'RON',
+    description: 'Colectare gratuită și bonificație în bani sau produse pe litru de ulei predat.',
+  },
+};
+
 export default function ColectareUleiUzatPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
       <main className={styles.main}>
         <section className={styles.banner}>
